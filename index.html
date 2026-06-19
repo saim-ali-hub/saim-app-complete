@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LINOOPTEK INNOVATIONS PLATFORM</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- XTERM CSS -->
+    <link rel="stylesheet"
+             href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" />
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+
+        <div class="logo-section">
+
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Logo" class="logo">
+            </div>
+
+            <h1>LINOOPTEK INNOVATIONS PLATFORM</h1>
+            <div class="user-panel">
+                   <div>
+                        Welcome:
+                        <strong id="currentUser">Loading...</strong>
+                   </div>
+
+                  <div style="margin-top:8px;">
+                         <a href="/logout"
+                              style="color:white;text-decoration:none;">
+                              Logout
+                         </a>
+                     </div>
+                 </div>
+            </div>
+       </div>
+
+    <!-- MENU -->
+    <div class="menu">
+
+        <button onclick="loadSection('quiz')">QUIZ</button>
+        <button onclick="loadSection('lab')">LAB</button>
+        <button onclick="loadSection('test')">TEST</button>
+        <button onclick="loadSection('evaluation')">EVALUATION</button>
+        <button onclick="loadSection('recording')">RECORDING</button>
+        <button onclick="showLeaderBoard()">LEADER BOARD</button>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="main-container">
+
+        <!-- LEFT PANEL -->
+        <div class="left-panel">
+
+            <h2>AVAILABLE ITEMS</h2>
+            <ul id="itemList"></ul>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right-panel default-view" id="rightPanel">
+
+            <!-- DEFAULT VIEW -->
+            <div class="welcome-title">
+
+               <h1 style="color:#1a237e;">
+                   Welcome to LinoopTEK Innovation Environment
+               </h1>
+
+    <p>
+            Select QUIZ, LAB, TEST or PROJECT from the menu above.
+                  </p>
+            </div>
+
+            <!-- WORK AREA (LAB / TEST / PROJECT) -->
+            <div class="work-area">
+                <div class="question-panel" id="questions-panel">
+                    <div id="contentArea">Questions will appear here</div>
+                </div>
+            </div>
+         </div>
+     </div>
+
+    <!-- XTERM JS -->
+    <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit/lib/xterm-addon-fit.js"></script>
+
+    <!--APPLICATION JS SCRIPTS -->
+    <script src="js/main.js"></script>
+    <script src="js/script_quiz.js"></script>
+    <script src="js/script_lab.js"></script>
+    <script src="js/script_test.js"></script>
+    <script src="js/script_evaluation.js"></script>
+    <script src="js/script_recording.js"></script>
+    <script src="js/script_leaderboard.js"></script>
+<script>
+       fetch("user.php")
+              .then(response => response.json())
+              .then(data => {
+                     if (data.user) {
+
+                          document.getElementById("currentUser")
+                                            .innerText = data.user;
+                          window.AppState = window.AppState || {};
+                          window.AppState.currentUser = data.user;
+                   }
+         })
+         .catch(error => {
+               console.error("Unable to determine logged in user:", error);
+         });
+   </script>
+
+</body>
+</html>
