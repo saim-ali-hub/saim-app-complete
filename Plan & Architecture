@@ -1,0 +1,243 @@
+LinoopTek Innovations Integrated Platform
+________________________________________
+Platform Overview
+This platform will run on Apache and provide:
+•	QUIZ Management
+•	LAB Management
+•	TEST Management
+•	PROJECT Management
+•	Automatic quiz evaluation
+•	Validation script execution for labs/tests/projects
+•	Result storage
+•	Dynamic loading from directories
+________________________________________
+Recommended Widths
+Main layout
+Left Lab List             = 18%
+Right Work Area      = 82%
+________________________________________
+
+ARCHITECTURE
+Student Browser
+    
+
+Apache Authentication
+      
+
+index.html
+      
+
+api.php
+      
+
+evaluate_lab.php
+      
+
+validate_lab.sh
+      
+
+SSH to Student VM
+      
+
+validator-2026.sh
+      
+
+Result copied back
+      
+
+Management VM Results Repository________________________________________
+Directory Architecture
+
+[root@node1 ~]# tree /var/www/
+/var/www/
+├── cgi-bin
+├── html
+│   ├── actual_leader_board.php
+│   ├── api.php
+│   ├── create.html
+│   ├── get_evaluations.php
+│   ├── get_item.php
+│   ├── get_results.php
+│   ├── images
+│   │   ├── linoop1.png
+│   │   └── logo.png
+│   ├── index.html
+│   ├── js
+│   │   ├── main.js
+│   │   ├── script_evaluation.js
+│   │   ├── script_lab.js
+│   │   ├── script_lab.js-bk.11.05.2026
+│   │   ├── script_leaderboard.js
+│   │   ├── script_project.js
+│   │   ├── script_quiz.js
+│   │   ├── script_recording.js
+│   │   └── script_test.js
+│   ├── leaderboard.php
+│   ├── login.html
+│   ├── style.css
+│   ├── terminal.html
+│   ├── test.php
+│   └── user.php
+└── private_data
+    ├── backend
+    │   ├── db.py
+    │   ├── lab.db
+    │   ├── main.py
+    │   ├── __pycache__
+    │   │   ├── auth.cpython-39.pyc
+    │   │   ├── db.cpython-39.pyc
+    │   │   ├── main.cpython-39.pyc
+    │   │   └── shell.cpython-39.pyc
+    │   └── shell.py
+    ├── evaluation
+    │   ├── evaluation1.json
+    │   ├── evaluation2.json
+    │   ├── evaluation3.json
+    │   ├── evaluation4.json
+    │   └── list.json
+    ├── lab
+    │   ├── lab1.json
+    │   ├── lab2.json
+    │   ├── list.json
+    │   ├── results
+    │   │   ├── debug.txt
+    │   │   ├── lab1_result.txt
+    │   │   ├── lab2_result.txt
+    │   │   ├── lab_debug.txt
+    │   │   └── test.txt
+    │   ├── validate_lab.sh
+    │   └── validator-2026.sh
+    ├── project
+    │   ├── list.json
+    │   ├── project1.json
+    │   ├── results
+    │   │   └── project_results.txt
+    │   ├── validate_project.php
+    │   └── validate.sh
+    ├── quiz
+    │   ├── list.json
+    │   ├── quiz1.json
+    │   ├── quiz2.json
+    │   ├── quiz3.json
+    │   ├── quiz4.json
+    │   ├── quiz5.json
+    │   ├── quiz6.json
+    │   └── results
+    │       ├── quiz1_result.txt
+    │       ├── quiz2_result.txt
+    │       ├── quiz3_result.txt
+    │       ├── quiz4_result.txt
+    │       ├── quiz5_result.txt
+    │       ├── quiz6_result.txt
+    │       └── script_sorting.sh
+    ├── recording
+    │   └── list.json
+    ├── test
+    │   ├── list.json
+    │   ├── results
+    │   │   └── test_results.txt
+    │   ├── test1.json
+    │   ├── test2.json
+    │   ├── validate.sh
+    │   └── validate_test.php
+    └── validator
+        ├── evaluate_lab.php
+        └── evaluate_quiz.php
+
+18 directories, 75 files
+________________________________________
+PERMISSION PLAN
+
+Give execution permissions:
+
+# ls -ld /var/www
+drwxr-xr-x. 5 root root 53 May 14 17:37 /var/www/
+
+# ls -l /var/www/
+total 0
+drwxr-xr-x. 4 apache apache 191 May 15 23:26 html
+drwxr-x---. 8 apache apache  88 May 15 23:29 private_data
+
+[root@node1 private_data]# ls -ld /var/www/html
+drwxr-xr-x. 4 apache apache 167 May 13 05:14 /var/www/html
+
+[root@node1 private_data]# ls -l /var/www/html
+-rw-r-----. 1 apache apache  453 Jun 16 18:47 api.php
+-rw-r--r--. 1 apache apache  237 Jun 16 16:58 get_evaluations.php
+-rw-r--r--. 1 apache apache  607 Jun 16 18:23 get_item.php
+-rw-r--r--. 1 apache apache  306 Jun 15 22:26 get_results.php
+drwxr-xr-x. 2 apache apache   41 May 14 16:26 images
+-rwxr-xr-x. 1 apache apache 3690 Jun 16 18:37 index.html
+drwxr-xr-x. 2 apache apache 4096 Jun 16 18:51 js
+-rw-r--r--. 1 apache apache   3738 Jun 16 16:33 leaderboard.php
+-rwxr-xr-x. 1 apache apache 3916 Jun 15 04:59 style.css
+-rw-r--r--. 1 apache apache  149 May 13 00:35 test.php
+-rw-r--r--. 1 root   root    119 Jun 15 03:27 user.php
+
+[root@node1 private_data]# ls -ld /var/www/html/images/
+drwxr-xr-x. 2 apache apache 41 May 14 16:26 /var/www/html/images/
+
+[root@node1 private_data]# ls -l /var/www/html/images/
+-rwxr-xr-x. 1 apache apache  7198 May 14 16:26 linoop1.png
+-rwxr-xr-x. 1 apache apache 32806 May 10 18:58 logo.png
+
+[root@node1 private_data]# ls -ld /var/www/html/js/
+drwxr-xr-x. 2 apache apache 146 May 15 23:04 /var/www/html/js/
+
+[root@node1 private_data]# ls -l /var/www/html/js
+-rw-r--r--. 1 apache apache  5003 Jun 16 18:51 main.js
+-rw-r--r--. 1 apache apache  2808 Jun 16 18:48 script_evaluation.js
+-rw-r--r--. 1 apache apache  7418 Jun 15 18:33 script_lab.js
+-rw-r--r--. 1 apache apache  3751 Jun 16 18:38 script_leaderboard.js
+-rw-r--r--. 1 apache apache     0 May 11 17:27 script_project.js
+-rw-r--r--. 1 apache apache  7901 Jun 15 17:53 script_quiz.js
+-rw-r--r--. 1 apache apache   976 Jun 15 04:45 script_recording.js
+-rw-r--r--. 1 apache apache     0 May 11 17:27 script_test.js
+
+[root@node1 private_data]# ls -ld /var/www/private_data/
+drwxr-x---. 9 apache apache 122 Jun 15 02:56 private_data
+
+[root@node1 private_data]# ls -l /var/www/private_data/
+drwxr-x---. 3 apache apache  83 May 16 18:59 backend
+drwxr-x---. 2 apache apache 119 Jun 16 18:57 evaluation
+drwxr-x---. 3 apache apache 120 May 13 23:58 lab
+drwxr-x---. 3 apache apache 106 May 10 19:18 project
+drwxr-x---. 3 apache apache 128 Jun 16 14:52 quiz
+drwxr-x---. 2 apache apache  23 Jun 15 04:04 recording
+drwxr-x---. 3 apache apache 118 May 10 19:18 test
+drwxr-x---. 2 apache apache  55 May 16 22:01 validator
+
+[root@node1 private_data]# ls -l /var/www/private_data/lab
+--rwxr-x---. 1 apache apache 1886 May 13 02:49 lab1.json
+-rwxr-x---. 1 apache apache 2426 May 13 17:31 lab2.json
+-rwxr-x---. 1 apache apache  199 May 12 02:10 list.json
+drwxr-x---. 2 apache apache  106 May 13 19:39 results
+-rwxr-x---. 1 apache apache  409 May 12 15:04 validate_lab.sh
+-rwxr-x---. 1 apache apache 9751 May 13 19:39 validator-2026.sh
+
+[root@node1 private_data]# ls -l /var/www/private_data/quiz/
+-rwxr-x---. 1 apache apache  527 Jun 15 02:08 list.json
+-rwxr-x---. 1 apache apache 5292 Jun 15 02:08 quiz1.json
+-rwxr-x---. 1 apache apache 3877 May 15 22:04 quiz2.json
+-rw-r-----. 1 apache apache 4875 Jun 15 02:15 quiz3.json
+-rw-r-----. 1 apache apache 5011 Jun 15 02:21 quiz4.json
+-rw-r-----. 1 apache apache 4975 Jun 15 02:24 quiz5.json
+drwxr-x---. 2 apache apache   54 May 15 22:28 results
+
+[root@node1 private_data]# ls -l evaluation/
+-rwxr-x---. 1 apache apache 192 Jun 16 18:57 evaluation1.json
+-rwxr-x---. 1 apache apache  37 Jun 16 17:11 evaluation2.json
+-rwxr-x---. 1 apache apache  37 Jun 16 17:12 evaluation3.json
+-rwxr-x---. 1 apache apache  37 Jun 16 17:12 evaluation4.json
+-rwxr-x---. 1 apache apache 380 Jun 16 17:09 list.json
+
+[root@node1 private_data]# ls  -l /var/www/private_data/validator/
+-rwxr-x---. 1 apache apache 1419 May 16 22:01 evaluate_lab.php
+-rwxr-x---. 1 apache apache 5955 May 15 22:26 evaluate_quiz.php
+
+[root@node1 private_data]# ls  -l /var/www/private_data/recordings/
+-rw-r-----. 1 apache apache 1138 Jun 15 04:04 list.json
+
+SELinux:
+setsebool -P httpd_execmem 1
+setsebool -P httpd_enable_cgi 1
