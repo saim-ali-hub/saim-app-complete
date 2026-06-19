@@ -1,0 +1,205 @@
+{
+  "title": "QUIZ 6 - SSH, Linux & Virtualization",
+  "questions": [
+    {
+      "question": "Which one of the following is an industry-standard tool commonly used for SSH access to Linux servers from Windows?",
+      "options": [
+        "Notepad",
+        "Paint",
+        "MobaXterm",
+        "Calculator"
+      ],
+      "answer": "MobaXterm"
+    },
+    {
+      "question": "Which command is used to display block devices in Linux?",
+      "options": [
+        "fdisk",
+        "lsblk",
+        "blkid",
+        "df"
+      ],
+      "answer": "lsblk"
+    },
+    {
+      "question": "In a hardware RAID configuration, the operating system typically sees:",
+      "options": [
+        "All physical disks individually",
+        "Only the RAID controller",
+        "A single logical volume presented by the RAID controller",
+        "No disks"
+      ],
+      "answer": "A single logical volume presented by the RAID controller"
+    },
+    {
+      "question": "In Linux, which of the following represents a disk?",
+      "options": [
+        "sda1",
+        "sda2",
+        "sda3",
+        "sda"
+      ],
+      "answer": "sda"
+    },
+    {
+      "question": "Which command displays detailed information about the host system?",
+      "options": [
+        "uname -a",
+        "hostnamectl",
+        "hostinfo",
+        "host"
+      ],
+      "answer": "hostnamectl"
+    },
+    {
+      "question": "Which command displays the number of available CPUs on a Linux server?",
+      "options": [
+        "lscpu",
+        "free -m",
+        "nproc",
+        "top"
+      ],
+      "answer": "nproc"
+    },
+    {
+      "question": "Which command provides detailed CPU information?",
+      "options": [
+        "cpuinfo",
+        "free -m",
+        "lscpu",
+        "nproc"
+      ],
+      "answer": "lscpu"
+    },
+    {
+      "question": "Which command displays memory information in megabytes?",
+      "options": [
+        "mem -m",
+        "free -m",
+        "memory -m",
+        "lsmem"
+      ],
+      "answer": "free -m"
+    },
+    {
+      "question": "Which command would you use to verify the amount of RAM installed on a Linux server?",
+      "options": [
+        "lscpu",
+        "free -m",
+        "nproc",
+        "ip addr"
+      ],
+      "answer": "free -m"
+    },
+    {
+      "question": "What is a Hypervisor?",
+      "options": [
+        "Database Server",
+        "Software that allows multiple VMs to run on one physical machine",
+        "Firewall",
+        "Package Manager"
+      ],
+      "answer": "Software that allows multiple VMs to run on one physical machine"
+    },
+    {
+      "question": "Which of the following is a Type-1 Hypervisor?",
+      "options": [
+        "VirtualBox",
+        "VMware Workstation",
+        "VMware ESXi",
+        "MobaXterm"
+      ],
+      "answer": "VMware ESXi"
+    },
+    {
+      "question": "Type-2 Hypervisors run:",
+      "options": [
+        "Directly on hardware",
+        "Inside BIOS",
+        "On top of a host operating system",
+        "Inside a switch"
+      ],
+      "answer": "On top of a host operating system"
+    },
+    {
+      "question": "Which VMware product is commonly installed directly on physical servers?",
+      "options": [
+        "VMware Workstation",
+        "VMware Player",
+        "VMware ESXi",
+        "VMware Tools"
+      ],
+      "answer": "VMware ESXi"
+    },
+    {
+      "question": "What is the primary advantage of virtualization?",
+      "options": [
+        "Requires more servers",
+        "Better hardware utilization",
+        "Removes networking requirements",
+        "Eliminates operating systems"
+      ],
+      "answer": "Better hardware utilization"
+    },
+    {
+      "question": "HP servers typically use which utility to configure RAID?",
+      "options": [
+        "Device Manager",
+        "Smart Storage Administrator (SSA)",
+        "Notepad",
+        "Registry Editor"
+      ],
+      "answer": "Smart Storage Administrator (SSA)"
+    },
+    {
+      "question": "Which key is commonly used to enter Intelligent Provisioning on HP servers?",
+      "options": [
+        "F1",
+        "F2",
+        "F10",
+        "F12"
+      ],
+      "answer": "F10"
+    },
+    {
+      "question": "What does SSH stand for?",
+      "options": [
+        "Secure Shell",
+        "Server Shell Host",
+        "Secure Server Host",
+        "Shell Service Host"
+      ],
+      "answer": "Secure Shell"
+    },
+    {
+      "question": "Which command is used to connect to a remote Linux server?",
+      "options": [
+        "telnet server",
+        "connect server",
+        "ssh user@server",
+        "login server"
+      ],
+      "answer": "ssh user@server"
+    },
+    {
+      "question": "What is the IPv4 loopback address?",
+      "options": [
+        "0.0.0.0",
+        "255.255.255.255",
+        "127.0.0.1",
+        "192.168.1.1"
+      ],
+      "answer": "127.0.0.1"
+    },
+    {
+      "question": "What utility is commonly used to verify whether a server is reachable on the network?",
+      "options": [
+        "grep",
+        "ping",
+        "vi",
+        "tar"
+      ],
+      "answer": "ping"
+    }
+  ]
+}
