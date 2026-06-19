@@ -1,0 +1,205 @@
+{
+  "title": "QUIZ 4 - Racking & Stacking and iDRAC Configuration",
+  "questions": [
+    {
+      "question": "Rack and stack mainly involves:",
+      "options": [
+        "Coding applications",
+        "Configuring firewall rules",
+        "Physical hardware installation in racks",
+        "Cloud migration"
+      ],
+      "answer": "Physical hardware installation in racks"
+    },
+    {
+      "question": "What is the purpose of server rails?",
+      "options": [
+        "Cooling servers",
+        "Connecting network cables",
+        "Powering servers",
+        "Securing server in rack"
+      ],
+      "answer": "Securing server in rack"
+    },
+    {
+      "question": "Why do servers have dual power supplies?",
+      "options": [
+        "Faster performance",
+        "Redundancy",
+        "Reduce RAM usage",
+        "Improve CPU speed"
+      ],
+      "answer": "Redundancy"
+    },
+    {
+      "question": "What does KVM stand for?",
+      "options": [
+        "Kernel Virtual Machine",
+        "Knowledge Virtual Module",
+        "Keyboard, Video, Mouse",
+        "Key Value Manager"
+      ],
+      "answer": "Keyboard, Video, Mouse"
+    },
+    {
+      "question": "In data centers, KVM is used for:",
+      "options": [
+        "Database backup",
+        "Controlling multiple servers",
+        "Network routing",
+        "Cloud storage"
+      ],
+      "answer": "Controlling multiple servers"
+    },
+    {
+      "question": "A KVM switch allows:",
+      "options": [
+        "Multiple OS installations",
+        "Storage encryption",
+        "Faster CPU processing",
+        "One keyboard/monitor/mouse for many servers"
+      ],
+      "answer": "One keyboard/monitor/mouse for many servers"
+    },
+    {
+      "question": "iDRAC is mainly used in:",
+      "options": [
+        "HP servers only",
+        "Cisco routers",
+        "Dell servers",
+        "Linux desktops"
+      ],
+      "answer": "Dell servers"
+    },
+    {
+      "question": "First step in configuring iDRAC is:",
+      "options": [
+        "Install OS",
+        "Connect iDRAC Ethernet cable",
+        "Install VMware",
+        "Configure DNS"
+      ],
+      "answer": "Connect iDRAC Ethernet cable"
+    },
+    {
+      "question": "iDRAC port is used for:",
+      "options": [
+        "Management access",
+        "Video output",
+        "Storage expansion",
+        "Power supply"
+      ],
+      "answer": "Management access"
+    },
+    {
+      "question": "Which key is pressed to enter iDRAC settings?",
+      "options": [
+        "F12",
+        "F1",
+        "F2",
+        "F10"
+      ],
+      "answer": "F2"
+    },
+    {
+      "question": "Which type of IP Address is typically recommended when configuring iDRAC?",
+      "options": [
+        "Dynamic",
+        "Static",
+        "Ignored",
+        "Encrypted"
+      ],
+      "answer": "Static"
+    },
+    {
+      "question": "iDRAC requires:",
+      "options": [
+        "Bluetooth connection",
+        "Ethernet connection",
+        "USB only",
+        "WiFi only"
+      ],
+      "answer": "Ethernet connection"
+    },
+    {
+      "question": "iDRAC can be used for:",
+      "options": [
+        "Remote management",
+        "Gaming",
+        "Email hosting",
+        "File compression"
+      ],
+      "answer": "Remote management"
+    },
+    {
+      "question": "Which is NOT part of rack and stack?",
+      "options": [
+        "Cable management",
+        "Installing rails",
+        "Writing application code",
+        "Power connection"
+      ],
+      "answer": "Writing application code"
+    },
+    {
+      "question": "Which device is commonly used for shared server access?",
+      "options": [
+        "Router",
+        "KVM switch",
+        "Firewall",
+        "Switch port"
+      ],
+      "answer": "KVM switch"
+    },
+    {
+      "question": "iDRAC can help with:",
+      "options": [
+        "Hardware monitoring",
+        "Video editing",
+        "Coding apps",
+        "Browsing internet"
+      ],
+      "answer": "Hardware monitoring"
+    },
+    {
+      "question": "Main goal of rack and stack is:",
+      "options": [
+        "Software development",
+        "Prepare hardware for production",
+        "Create virtual machines",
+        "Design websites"
+      ],
+      "answer": "Prepare hardware for production"
+    },
+    {
+      "question": "After mounting server, next step is:",
+      "options": [
+        "Install antivirus",
+        "Connect power supplies and cables",
+        "Install OS",
+        "Create users"
+      ],
+      "answer": "Connect power supplies and cables"
+    },
+    {
+      "question": "PDUs are used for:",
+      "options": [
+        "Storage",
+        "Power distribution",
+        "Networking",
+        "Monitoring CPU"
+      ],
+      "answer": "Power distribution"
+    },
+    {
+      "question": "Which power connection method is recommended for redundancy?",
+      "options": [
+        "Single PDU",
+        "Separate PDUs",
+        "No power supply",
+        "USB power"
+      ],
+      "answer": "Separate PDUs"
+    }
+  ]
+}
