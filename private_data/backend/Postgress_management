@@ -1,0 +1,91 @@
+MANAGING POSTGRESS DATABASE:
+Step 1 — Install PostgreSQL
+yum install postgresql-server postgresql-contrib -y
+postgresql-setup initdb
+systemctl enable --now postgresql
+________________________________________
+Step 2 — Create DB and user
+Break down step by step
+✅ Step 1: Switch to postgres user
+Run this on Linux:
+sudo -u postgres psql
+You will enter PostgreSQL shell:
+postgres=#
+________________________________________
+✅ Step 2: Create database
+Inside psql:
+CREATE DATABASE linuxlab;
+________________________________________
+✅ Step 3: Create user
+CREATE USER labuser WITH PASSWORD 'labpass';
+________________________________________
+✅ Step 4: Grant permissions
+GRANT ALL PRIVILEGES ON DATABASE linuxlab TO labuser;
+________________________________________
+✅ Step 5 (IMPORTANT for real usage)
+Connect to your database:
+\c linuxlab
+Then run:
+GRANT ALL ON SCHEMA public TO labuser;
+ALTER SCHEMA public OWNER TO labuser;
+This avoids permission issues when FastAPI creates tables.
+________________________________________
+✅ Step 6: Exit PostgreSQL
+\q
+________________________________________
+🔥 Final one-line version (for quick copy)
+sudo -u postgres psql
+inside
+CREATE DATABASE linuxlab;
+CREATE USER labuser WITH PASSWORD 'labpass';
+GRANT ALL PRIVILEGES ON DATABASE linuxlab TO labuser;
+
+________________________________________
+Step 3 — Install Python driver
+pip install psycopg2-binary
+________________________________________
+Step 4 — Configure Postgress
+
+change PostgreSQL auth method
+Edit:
+vi /var/lib/pgsql/data/pg_hba.conf
+Find lines like:
+local   all   all   ident
+host    all   all   127.0.0.1/32   ident
+host    all   all   ::1/128        ident
+👉 CHANGE them to:
+local   all   all   peer
+host    all   all   127.0.0.1/32   md5
+host    all   all   ::1/128        md5
+________________________________________
+restart PostgreSQL
+systemctl restart postgresql
+________________________________________
+ensure password is set correctly
+Login:
+sudo -u postgres psql
+Then:
+ALTER USER labuser WITH PASSWORD 'labpass';
+________________________________________
+test manually – quit from database using 
+\q
+psql -h localhost -U labuser -d linuxlab
+\dt
+If you get error like 
+linuxlab=> \dt
+Did not find any relations.
+Then create table
+CREATE TABLE users (
+    username TEXT PRIMARY KEY,
+    password TEXT
+);
+
+Now again try
+\d
+        List of relations
+ Schema | Name  | Type  |  Owner
+--------+-------+-------+---------
+ public | users | table | labuser
+(1 row)
+
+linuxlab=>
