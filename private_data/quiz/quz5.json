@@ -1,0 +1,205 @@
+{
+  "title": "QUIZ 5 - Networking, BIOS & RAID",
+  "questions": [
+    {
+      "question": "What does MAC stand for in networking?",
+      "options": [
+        "Media Access Control",
+        "Machine Access Control",
+        "Media Allocation Channel",
+        "Main Access Circuit"
+      ],
+      "answer": "Media Access Control"
+    },
+    {
+      "question": "What is the primary purpose of a MAC address?",
+      "options": [
+        "Identify websites on the internet",
+        "Identify devices on a local network",
+        "Store user passwords",
+        "Encrypt network traffic"
+      ],
+      "answer": "Identify devices on a local network"
+    },
+    {
+      "question": "Which address is mainly used for routing between networks?",
+      "options": [
+        "MAC address",
+        "Serial number",
+        "IP address",
+        "UUID"
+      ],
+      "answer": "IP address"
+    },
+    {
+      "question": "What does BIOS stand for?",
+      "options": [
+        "Basic Input/Output System",
+        "Binary Internal Operating Service",
+        "Basic Internet Operating Software",
+        "Boot Interface Operating Setup"
+      ],
+      "answer": "Basic Input/Output System"
+    },
+    {
+      "question": "Where is BIOS firmware stored?",
+      "options": [
+        "On a motherboard chip",
+        "On the monitor",
+        "Inside the keyboard",
+        "On the network switch"
+      ],
+      "answer": "On a motherboard chip"
+    },
+    {
+      "question": "A management port allows administrators to do what even if the operating system is down?",
+      "options": [
+        "Watch movies",
+        "Manage the server remotely",
+        "Increase RAM size",
+        "Print documents"
+      ],
+      "answer": "Manage the server remotely"
+    },
+    {
+      "question": "Which task is commonly performed through a management port?",
+      "options": [
+        "User web browsing",
+        "Application data transfer",
+        "Powering the server on or off remotely",
+        "Streaming media"
+      ],
+      "answer": "Powering the server on or off remotely"
+    },
+    {
+      "question": "What does RAID stand for?",
+      "options": [
+        "Redundant Array of Independent Disks",
+        "Random Access Integrated Drive",
+        "Reliable Automatic Internet Disk",
+        "Remote Array Interface Device"
+      ],
+      "answer": "Redundant Array of Independent Disks"
+    },
+    {
+      "question": "Which is a key goal of RAID?",
+      "options": [
+        "Redundancy",
+        "Performance improvement",
+        "Increased storage capacity",
+        "All of the above"
+      ],
+      "answer": "All of the above"
+    },
+    {
+      "question": "Which RAID level uses striping only?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 10"
+      ],
+      "answer": "RAID 0"
+    },
+    {
+      "question": "What is the major disadvantage of RAID 0?",
+      "options": [
+        "Low performance",
+        "No redundancy",
+        "50% capacity loss",
+        "Requires four disks"
+      ],
+      "answer": "No redundancy"
+    },
+    {
+      "question": "Which RAID level uses mirroring?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "answer": "RAID 1"
+    },
+    {
+      "question": "What is the usable capacity of RAID 1 with two 1 TB disks?",
+      "options": [
+        "0.5 TB",
+        "1 TB",
+        "2 TB",
+        "3 TB"
+      ],
+      "answer": "1 TB"
+    },
+    {
+      "question": "Which RAID level distributes parity across disks?",
+      "options": [
+        "RAID 1",
+        "RAID 0",
+        "RAID 5",
+        "RAID 10"
+      ],
+      "answer": "RAID 5"
+    },
+    {
+      "question": "RAID 5 can survive how many disk failures?",
+      "options": [
+        "None",
+        "One",
+        "Two",
+        "Three"
+      ],
+      "answer": "One"
+    },
+    {
+      "question": "What is the minimum number of disks required for RAID 5?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "3"
+    },
+    {
+      "question": "Which RAID level uses double parity?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "answer": "RAID 6"
+    },
+    {
+      "question": "RAID 6 can survive how many disk failures?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "answer": "Two"
+    },
+    {
+      "question": "What is the minimum number of disks required for RAID 6?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": "4"
+    },
+    {
+      "question": "If one disk fails in RAID 0, what happens?",
+      "options": [
+        "The array continues normally",
+        "Only one file is lost",
+        "All data in the array is lost",
+        "The failed disk is automatically rebuilt"
+      ],
+      "answer": "All data in the array is lost"
+    }
+  ]
+}
