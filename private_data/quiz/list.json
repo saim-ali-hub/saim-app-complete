@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Quiz 1 - Linux Basic command & Networking",
+        "file": "quiz1.json"
+    },
+    {
+        "name": "Quiz 2 - Basic commands & Directory Knowledge",
+        "file": "quiz2.json"
+    },
+    {
+        "name": "Quiz 3 - Server Hardware, BIOS, RAID & Ports",
+        "file": "quiz3.json"
+    },
+    {
+        "name": "Quiz 4 - Racking & Stacking and iDRAC Configuration",
+        "file": "quiz4.json"
+    },
+    {
+        "name": "Quiz 5 - Networking, BIOS & RAID",
+        "file": "quiz5.json"
+    },
+    {
+        "name": "Quiz 6 – Linux, SSH & Virtualization",
+        "file": "quiz6.json"
+    },
+]
