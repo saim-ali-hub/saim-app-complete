@@ -1,0 +1,37 @@
+{
+  "lab_id": "lab1",
+  "title": "Lab 1 – 2026",
+  "description": "Linux Basic Commands & Navigation",
+  "instructions": "While you in your home directory gather detailed information about your server (taks 1 till 8) and append the output (don't overwrite) into a file named 'server_info' located in your home directory",
+  "commands_covered": [
+    "pwd",
+    "ls",
+    "ls -l",
+    "ls -al",
+    "cd",
+    "cd ..",
+    "tree",
+    "mkdir",
+    "mkdir -p",
+    "rmdir",
+    "rm -r",
+    "cp",
+    "mv"
+  ],
+  "questions": [
+    "Use the appropriate command to display your present working directory.",
+    "Check kernel version of your server.",
+    "Show detailed file information (permissions, size, ownership) in the current directory.",
+    "List all files including hidden ones, with detailed information.",
+    "Create a new directory named 'Linux', then navigate into it using the cd command.",
+    "Use pwd to verify you're inside the 'Linux' directory.",
+    "While in the Linux directory, create three subdirectories: 'Redhat', 'oel', and 'debian'.",
+    "Use cd .. to go up one level, then check and confirm your present working directory using pwd.",
+    "While in your home directory, create three empty files: 'file1.txt', 'pic.jpg', and 'clip.avi'.",
+    "Create three directories in your home directory: 'documents', 'images', and 'media'. Now Move 'file1.txt' into 'documents', 'pic.jpg' into 'images', and 'clip.avi' into 'media'.",
+    "Create a nested directory structure office/hobby/personal using a single mkdir command with the appropriate option.",
+    "Copy 'file1.txt' from the 'documents' directory into the 'office' directory.",
+    "Copy 'pic.jpg' from the 'images' directory into the 'hobby' directory.",
+    "Use tree command to display the structure of the 'office' directory and store in a file named office_tree under office/hobby/personal."
+  ]
+}
