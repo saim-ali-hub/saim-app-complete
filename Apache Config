@@ -1,0 +1,60 @@
+FRONTEND APPLICATION:
+Main Apache Configuration
+Enable PHP:
+dnf install httpd php php-cli -y
+systemctl enable httpd
+systemctl start httpd
+[root@node1 private_data]# grep apache /etc/sudoers
+apache ALL=(ALL) NOPASSWD: /usr/bin/bash /var/www/private_data/lab/validate_lab.sh *
+
+Configurations of httpd.conf:
+
+/etc/httpd/conf/httpd.conf
+Listen 8080
+# The following lines prevent .htaccess and .htpasswd files from being
+# viewed by Web clients.
+<Files ".ht*">
+    Require all denied
+</Files>
+
+<Files "*.json">
+    Require all denied
+</Files>
+
+# Deny access to the entirety of your server's filesystem. You must
+# explicitly permit access to web content directories in other
+# <Directory> blocks below.
+#
+DocumentRoot "/var/www/html"
+
+#
+# Relax access to content within /var/www.
+#
+<Directory "/var/www">
+    AllowOverride None
+    # Allow open access:
+    Require all granted
+</Directory>
+
+<VirtualHost *:80>
+    ServerName platform.linoop.local
+
+    DocumentRoot "/var/www/html"
+
+    <Directory "/var/www/html">
+        Require all granted
+        AllowOverride All
+        Options -Indexes +FollowSymLinks
+
+        DirectoryIndex index.php index.html
+
+    </Directory>
+
+    Alias /private_data/ "/var/www/private_data/"
+
+    <Directory "/var/www/private_data">
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+</VirtualHost> 
