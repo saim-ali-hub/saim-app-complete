@@ -1,0 +1,31 @@
+BACK END APPLICATION – FOR TERMINAL
+Terminal session
+Browser (xterm.js)
+   ↓
+WebSocket
+   ↓
+FastAPI
+   ↓
+Sdb.py (PostgressSQL Pool)
+   ↓
+PostgressSQL
+   ↓
+PTY master
+   ↓
+Linux OS (Shell)
+ 
+BACK END DEPENDECIES:
+
+Install deps
+dnf install -y python3 python3-pip
+pip install fastapi uvicorn python-jose passlib[bcrypt] python-multipart
+pip3 install "uvicorn[standard]" websockets
+OR 
+pip3 install websockets
+python3 --version
+pip3 --version
+
+[root@node1 backend]# ls
+db.py  lab.db  main.py  __pycache__  shell.py
+
+Create Postgress Data Base
