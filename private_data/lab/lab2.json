@@ -1,0 +1,38 @@
+{
+  "lab_id": "lab2",
+  "title": "Lab 2 – Navigation - 2026",
+  "description": "Linux Filesystem Management",
+  "instructions": "Perform all tasks from your home directory unless specified otherwise. Use proper Linux filesystem navigation, file management, copy, redirection, and text viewing commands.",
+  "commands_covered": [
+    "mkdir",
+    "mkdir -p",
+    "cd",
+    "pwd",
+    "touch",
+    "echo",
+    "cat",
+    "cp",
+    "tail",
+    "head",
+    "file",
+    "rmdir",
+    "ls"
+  ],
+  "questions": [
+    "Create the following nested directory structure in your home directory: 'vars/systems/logs'.",
+    "Inside the 'vars/systems' directory, create an empty file named 'dmesg'.",
+    "Create a file named 'file1.txt' inside the 'vars/systems/logs' directory containing the text: 'I love Linux and am excited to join the DevOps course'.",
+    "Create another nested directory structure in your home directory: 'vars/os/configs'.",
+    "Copy the '/etc/hosts' file into the 'vars/os/configs' directory.",
+    "Copy the hosts file from 'vars/os/configs' into the 'vars' directory located in your home directory.",
+    "Use the cat command to display the contents of the 'hosts' file located in the 'vars' directory.",
+    "Use the cat command again on the same hosts file and redirect the output into a new file named 'new_hosts' stored under the 'vars/os/configs' directory.",
+    "Copy the 'file1.txt' file from the 'vars/systems/logs' directory into the 'vars/os' directory and rename it to 'new_file1.txt' during the copy operation.",
+    "Inside the logs directory, create two empty files named 'sshd_config' and 'httpd.conf'.",
+    "Create a new file named 'new_file.txt' in the 'vars/systems' directory containing the text: 'I am enjoying DeveOps sessions and lab work'.",
+    "Attempt to remove the 'vars/os/configs' directory using the rmdir command and observe whether it succeeds or fails.",
+    "Use the tail command to display the last 5 lines of '/etc/nsswitch.conf' and append the output into a file named 'switch_output.txt' located in the 'vars/systems' directory.",
+    "Use the head command to display the first 3 lines of '/etc/resolv.conf' and overwrite the contents of a file named 'dns_output.txt' located in the 'vars/systems' directory.",
+    "Use the file command on '/etc/passwd' and '/bin/ls' and store the output into a file named 'output_file' inside the 'vars/systems/logs' directory."
+  ]
+}
