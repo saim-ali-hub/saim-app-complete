@@ -1,0 +1,205 @@
+{
+  "title": "System Information and Networking Commands",
+  "questions": [
+    {
+      "question": "What does the id command show?",
+      "options": [
+        "Disk usage",
+        "User and group IDs",
+        "Network configuration",
+        "CPU details"
+      ],
+      "answer": "User and group IDs"
+    },
+    {
+      "question": "What is the output of whoami?",
+      "options": [
+        "Current kernel version",
+        "Current logged-in username",
+        "System uptime",
+        "IP address"
+      ],
+      "answer": "Current logged-in username"
+    },
+    {
+      "question": "What does uptime display?",
+      "options": [
+        "Only boot time",
+        "System load and running time",
+        "Disk partitions",
+        "Memory usage only"
+      ],
+      "answer": "System load and running time"
+    },
+    {
+      "question": "What is the purpose of ifconfig?",
+      "options": [
+        "Manage users",
+        "Show CPU info",
+        "Show network interfaces",
+        "Manage files"
+      ],
+      "answer": "Show network interfaces"
+    },
+    {
+      "question": "What does nmcli device show display?",
+      "options": [
+        "CPU details",
+        "Disk partitions",
+        "Memory info",
+        "Network device information"
+      ],
+      "answer": "Network device information"
+    },
+    {
+      "question": "What does lsblk show?",
+      "options": [
+        "CPU info",
+        "Network stats",
+        "Memory usage",
+        "Block devices (disks/partitions)"
+      ],
+      "answer": "Block devices (disks/partitions)"
+    },
+    {
+      "question": "Which command shows CPU details?",
+      "options": [
+        "cpuinfo",
+        "lscpu",
+        "cpustat",
+        "procinfo"
+      ],
+      "answer": "lscpu"
+    },
+    {
+      "question": "What does free -m show?",
+      "options": [
+        "CPU usage",
+        "Maximum Memory",
+        "Free Memory",
+        "Memory in MB"
+      ],
+      "answer": "Memory in MB"
+    },
+    {
+      "question": "What is the purpose of a subnet mask in networking?",
+      "options": [
+        "Assign IP address",
+        "Separate network and host portion of an IP",
+        "Provide DNS resolution",
+        "Assign MAC address"
+      ],
+      "answer": "Separate network and host portion of an IP"
+    },
+    {
+      "question": "Which command shows logged-in user?",
+      "options": [
+        "login",
+        "whoami",
+        "id",
+        "iduser"
+      ],
+      "answer": "whoami"
+    },
+    {
+      "question": "What is the main function of DHCP?",
+      "options": [
+        "Resolve domain names",
+        "Assign IP addresses automatically",
+        "Encrypt traffic",
+        "Manage routing tables"
+      ],
+      "answer": "Assign IP addresses automatically"
+    },
+    {
+      "question": "Which command shows system memory?",
+      "options": [
+        "memshow",
+        "free",
+        "ramstat",
+        "memory"
+      ],
+      "answer": "free"
+    },
+    {
+      "question": "What is the role of DNS?",
+      "options": [
+        "Assign IP addresses",
+        "Convert domain names to IP addresses",
+        "Manage routing",
+        "Assign subnet masks"
+      ],
+      "answer": "Convert domain names to IP addresses"
+    },
+    {
+      "question": "Which command shows both CPU architecture and cores?",
+      "options": [
+        "lscpu",
+        "cpuinfo",
+        "archinfo",
+        "syscpu"
+      ],
+      "answer": "lscpu"
+    },
+    {
+      "question": "What is a default gateway used for?",
+      "options": [
+        "Assign IP address",
+        "Connect different networks",
+        "Encrypt data",
+        "Resolve DNS"
+      ],
+      "answer": "Connect different networks"
+    },
+    {
+      "question": "What is the main purpose of ifconfig?",
+      "options": [
+        "Check CPU load",
+        "Configure network interfaces",
+        "Show memory usage",
+        "Display disk partitions"
+      ],
+      "answer": "Configure network interfaces"
+    },
+    {
+      "question": "Which command shows system load average?",
+      "options": [
+        "lscpu",
+        "loadavg",
+        "sysload",
+        "uptime"
+      ],
+      "answer": "uptime"
+    },
+    {
+      "question": "What kind of device information does nmcli device show provide?",
+      "options": [
+        "CPU details",
+        "Network device configuration",
+        "Disk health",
+        "User login details"
+      ],
+      "answer": "Network device configuration"
+    },
+    {
+      "question": "Which command shows since how long server is up?",
+      "options": [
+        "time",
+        "uptime",
+        "date",
+        "clock"
+      ],
+      "answer": "uptime"
+    },
+    {
+      "question": "What is the IP of server in the given output of ifconfig?\neno49: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500\ninet 192.168.1.101 netmask 255.255.255.0 broadcast 192.168.1.255\ninet6 fe80::2a80:23ff:feaa:320c prefixlen 64 scopeid 0x20<link>\nether 28:80:23:aa:32:0c txqueuelen 1000 (Ethernet)\nRX packets 19889184 bytes 11439871577 (10.6 GiB)\nTX packets 34906385 bytes 33832995800 (31.5 GiB)\ndevice interrupt 16",
+      "options": [
+        "192.168.1.1",
+        "28:80:23:aa:32:0c",
+        "192.168.1.101",
+        "192.168.1.255"
+      ],
+      "answer": "192.168.1.101"
+     }
+  ]
+}
