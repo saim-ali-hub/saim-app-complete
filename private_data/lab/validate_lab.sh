@@ -1,3 +1,9 @@
+#!/bin/bash
+
+lab=$1
+STUDENT_NAME=$2
+
+VALIDATION_SCRIPT="/var/www/private_data/lab/validator-2026.sh"
 INCASE OF PERSONAL VM
 if [ ! -f "$VALIDATION_SCRIPT" ]; then
     echo "Validation script missing"
