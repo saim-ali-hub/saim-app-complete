@@ -1,0 +1,130 @@
+{
+  "title": "QUIZ 2 - Basic commands & Directory Knowledge",
+  "questions": [
+    {
+      "question": "Which command displays the current working directory?",
+      "options": ["ls", "pwd", "cd", "mkdir"],
+      "answer": "pwd"
+    },
+    {
+      "question": "Which command is used to change directories?",
+      "options": ["touch", "mkdir", "cd", "pwd"],
+      "answer": "cd"
+    },
+    {
+      "question": "Which command lists files and directories?",
+      "options": ["ls", "cd", "pwd", "touch"],
+      "answer": "ls"
+    },
+    {
+      "question": "Which command creates an empty file?",
+      "options": ["mkdir", "touch", "ls", "cd"],
+      "answer": "touch"
+    },
+    {
+      "question": "Which command creates a new directory?",
+      "options": ["touch", "pwd", "mkdir", "ls"],
+      "answer": "mkdir"
+    },
+    {
+      "question": "What does the ls -a show?",
+      "options": [
+        "Only directories",
+        "Hidden files and directories",
+        "File sizes only",
+        "Mounted filesystems"
+      ],
+      "answer": "Hidden files and directories"
+    },
+    {
+      "question": "Which command takes you to your home directory?",
+      "options": ["cd ~", "pwd", "ls /", "mkdir home"],
+      "answer": "cd ~"
+    },
+    {
+      "question": "What does pwd stand for?",
+      "options": [
+        "Personal Work Directory",
+        "Present Working Directory",
+        "Private Working Directory",
+        "Print Workspace Data"
+      ],
+      "answer": "Present Working Directory"
+    },
+    {
+      "question": "Which directory is the top-level directory in Linux?",
+      "options": ["/tmp", "/var", "/", "/boot"],
+      "answer": "/"
+    },
+    {
+      "question": "Which directory commonly stores bootloader and kernel files?",
+      "options": ["/tmp", "/boot", "/var", "/home"],
+      "answer": "/boot"
+    },
+    {
+      "question": "Which directory is used for temporary files?",
+      "options": ["/boot", "/etc", "/tmp", "/var"],
+      "answer": "/tmp"
+    },
+    {
+      "question": "Which directory usually contains log files?",
+      "options": ["/var", "/boot", "/tmp", "/root"],
+      "answer": "/var"
+    },
+    {
+      "question": "Which command can create multiple directories?",
+      "options": ["touch", "mkdir", "pwd", "cd"],
+      "answer": "mkdir"
+    },
+    {
+      "question": "What happens if you run touch file1?",
+      "options": [
+        "Deletes file1",
+        "Opens file1",
+        "Creates file1 if it does not exist",
+        "Renames file1"
+      ],
+      "answer": "Creates file1 if it does not exist"
+    },
+    {
+      "question": "Which command moves into the parent directory?",
+      "options": ["cd .", "cd /", "cd ..", "pwd"],
+      "answer": "cd .."
+    },
+    {
+      "question": "Which command lists files with detailed information?",
+      "options": ["ls -l", "ls -a", "pwd -l", "mkdir -l"],
+      "answer": "ls -l"
+    },
+    {
+      "question": "What is the purpose of the /var directory?",
+      "options": [
+        "Store temporary boot files",
+        "Store variable data like logs and spool files",
+        "Store user passwords",
+        "Store kernel modules"
+      ],
+      "answer": "Store variable data like logs and spool files"
+    },
+    {
+      "question": "Which command creates a directory named LinuxLab?",
+      "options": ["touch LinuxLab", "pwd LinuxLab", "mkdir LinuxLab", "cd LinuxLab"],
+      "answer": "mkdir LinuxLab"
+    },
+    {
+      "question": "Which command displays hidden files along with detailed information?",
+      "options": ["ls", "ls -al", "pwd -a", "cd -a"],
+      "answer": "ls -al"
+    },
+    {
+      "question": "What does cd /tmp do?",
+      "options": [
+        "Deletes /tmp",
+        "Lists files in /tmp",
+        "Changes current directory to /tmp",
+        "Creates /tmp"
+      ],
+      "answer": "Changes current directory to /tmp"
+    }
+  ]
+}
