@@ -1,0 +1,205 @@
+{
+  "title": "QUIZ 3 - Server Hardware, BIOS, RAID & Ports",
+  "questions": [
+    {
+      "question": "What does BIOS stand for?",
+      "options": [
+        "Basic Internet Operating System",
+        "Basic Input/Output System",
+        "Binary Input Operating System",
+        "Boot Initialization Operating System"
+      ],
+      "answer": "Basic Input/Output System"
+    },
+    {
+      "question": "Where is BIOS stored?",
+      "options": [
+        "Hard Drive",
+        "RAM",
+        "Motherboard Chip",
+        "CPU"
+      ],
+      "answer": "Motherboard Chip"
+    },
+    {
+      "question": "Which setting is typically stored in CMOS?",
+      "options": [
+        "Word Documents",
+        "System Date and Time",
+        "Database Records",
+        "Browser Cache"
+      ],
+      "answer": "System Date and Time"
+    },
+    {
+      "question": "What does hot-swappable mean?",
+      "options": [
+        "Drive can be removed while powered off",
+        "Drive can be replaced without shutting down the server",
+        "Drive runs at higher temperature",
+        "Drive can only be replaced by BIOS"
+      ],
+      "answer": "Drive can be replaced without shutting down the server"
+    },
+    {
+      "question": "Which technology combines multiple physical disks into one logical unit?",
+      "options": [
+        "CMOS",
+        "DIMM",
+        "RAID",
+        "PCI"
+      ],
+      "answer": "RAID"
+    },
+    {
+      "question": "RAID stands for:",
+      "options": [
+        "Rapid Access Independent Disks",
+        "Redundant Array of Independent Disks",
+        "Reliable Array of Internal Drives",
+        "Remote Access Independent Disks"
+      ],
+      "answer": "Redundant Array of Independent Disks"
+    },
+    {
+      "question": "RAID combines:",
+      "options": [
+        "CPUs",
+        "Memory Modules",
+        "Hard Drives",
+        "Network Cards"
+      ],
+      "answer": "Hard Drives"
+    },
+    {
+      "question": "A DIMM slot is:",
+      "options": [
+        "RAM Module",
+        "Hard Drive Bay",
+        "Connector that holds RAM",
+        "PCI Slot"
+      ],
+      "answer": "Connector that holds RAM"
+    },
+    {
+      "question": "A PCI card is used to:",
+      "options": [
+        "Add New Functionality",
+        "Replace BIOS",
+        "Replace RAM",
+        "Replace CPU"
+      ],
+      "answer": "Add New Functionality"
+    },
+    {
+      "question": "What is a RAID card?",
+      "options": [
+        "Network Adapter",
+        "Hardware RAID Controller",
+        "Memory Module",
+        "BIOS Chip"
+      ],
+      "answer": "Hardware RAID Controller"
+    },
+    {
+      "question": "What is a management port used for?",
+      "options": [
+        "Application Data",
+        "Remote Server Management",
+        "User File Storage",
+        "Memory Expansion"
+      ],
+      "answer": "Remote Server Management"
+    },
+    {
+      "question": "Which technology is Dell's out-of-band management solution?",
+      "options": [
+        "iLO",
+        "IPMI",
+        "iDRAC",
+        "Fibre Channel"
+      ],
+      "answer": "iDRAC"
+    },
+    {
+      "question": "Which technology is HPE's out-of-band management solution?",
+      "options": [
+        "iDRAC",
+        "iLO",
+        "SATA",
+        "NVMe"
+      ],
+      "answer": "iLO"
+    },
+    {
+      "question": "Which component stores temporary data for active processes?",
+      "options": [
+        "CPU",
+        "RAM",
+        "CMOS",
+        "RAID Controller"
+      ],
+      "answer": "RAM"
+    },
+    {
+      "question": "Which component is commonly referred to as the 'brain' of the computer?",
+      "options": [
+        "RAM",
+        "Hard Drive",
+        "CPU",
+        "NIC"
+      ],
+      "answer": "CPU"
+    },
+    {
+      "question": "Which server resource is responsible for network communication?",
+      "options": [
+        "DIMM",
+        "CPU",
+        "NIC (Network Interface Card)",
+        "CMOS"
+      ],
+      "answer": "NIC (Network Interface Card)"
+    },
+    {
+      "question": "Which command is commonly used in Linux to view CPU information?",
+      "options": [
+        "df -h",
+        "free -m",
+        "lscpu",
+        "ip addr"
+      ],
+      "answer": "lscpu"
+    },
+    {
+      "question": "Which Linux command displays RAM usage?",
+      "options": [
+        "lscpu",
+        "free -m",
+        "ip addr",
+        "hostnamectl"
+      ],
+      "answer": "free -m"
+    },
+    {
+      "question": "Which Linux command displays IP address information?",
+      "options": [
+        "free -m",
+        "lscpu",
+        "ifconfig",
+        "hostnamectl"
+      ],
+      "answer": "ifconfig"
+    },
+    {
+      "question": "Which command can be used to test connectivity to another IP address?",
+      "options": [
+        "free -m",
+        "ping",
+        "lscpu",
+        "hostnamectl"
+      ],
+      "answer": "ping"
+    }
+  ]
+}
