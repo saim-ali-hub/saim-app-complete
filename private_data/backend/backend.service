@@ -1,0 +1,33 @@
+[Unit]
+Description=Linux FastAPI Backend
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/linux-lab/backend
+
+ExecStart=/usr/bin/python3 -m uvicorn main:app --host 0.0.0.0 --port 8000
+
+Restart=always
+RestartSec=3
+
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
+________________________________________
+
+NOW START SERVICES
+firewall-cmd --add-port=8000/tcp --permanent
+firewall-cmd --list-port
+
+manually test:
+cd /var/www/private_data/backend
+/usr/bin/python3 -m uvicorn main:app --host 0.0.0.0 --port 8000
+
+RUN as system service
+systemctl enable backend.service --now
+systemctl status backend.service
+journalctl -u backend -f
+systemctl restart httpd
+systemctl status httpd
