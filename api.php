@@ -10,6 +10,9 @@ function respond($data, $code = 200) {
 $action = $_GET['action'] ?? '';
 
 if ($action === "quiz") {
+    if (!file_exists("/var/www/private_data/validator/evaluate_quiz.php")) {
+        respond(["error" => "validator missing"], 500);
+    }
     require "/var/www/private_data/validator/evaluate_quiz.php";
     exit;
 }
