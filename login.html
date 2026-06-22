@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> LinoopTek Innovations Platform Login</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css"/>
+
+  <style>
+    body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    font-family: Arial;
+    }
+
+    #loginBox {
+    text-align: center;
+    }
+
+    .card {
+      background: #111827;
+      width: 460px;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+
+    .logo {
+      width: 380px;
+      height: auto;
+      margin-bottom: 18px;
+      border-radius: 12px;
+    }
+    h2 {
+    color: #f8fafc;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: none;
+    }
+
+    button {
+      width: 95%;
+      padding: 10px;
+      margin-top: 10px;
+      background: #2563eb;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="loginBox">
+
+<div class="card">
+    <img src="images/linoop1.png" alt="Linoop Logo" class="logo">
+
+       <h2>LinoopTek Innovations Platform Login</h2>
+
+       <input id="username" placeholder="AD Username">
+       <button onclick="login()">Login</button>
+   </div>
+</div>
+<script>
+async function login() {
+
+    const username = document.getElementById("username").value.trim();
+
+    if (!username) {
+        alert("Enter username");
+        return;
+    }
+
+    const res = await fetch("login.php", {
+        method: "POST",
+        credentials: "include",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ username })
+    });
+
+    const data = await res.json();
+
+    if (data.status === "success") {
+        window.location.href = "index.html";
+    } else {
+        alert("User not found");
+    }
+}
+</script>
