@@ -36,7 +36,7 @@ DocumentRoot "/var/www/html"
     Require all granted
 </Directory>
 
-<VirtualHost *:80>
+<VirtualHost *:8181>
     ServerName platform.linoop.local
 
     DocumentRoot "/var/www/html"
@@ -46,7 +46,7 @@ DocumentRoot "/var/www/html"
         AllowOverride All
         Options -Indexes +FollowSymLinks
 
-        DirectoryIndex index.php index.html
+        DirectoryIndex login.html index.html login.php index.php
 
     </Directory>
 
@@ -57,4 +57,4 @@ DocumentRoot "/var/www/html"
         Require all granted
     </Directory>
 
-</VirtualHost> 
+</VirtualHost>
