@@ -1,7 +1,16 @@
+
 <?php
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
+session_start();
+session_write_close();
+
+$STUDENT_NAME =
+    $_SESSION["user"]
+    ?? $_SERVER['REMOTE_ADDR']
+    ?? 'unknown';
 
 /* READ JSON INPUT */
 $data = json_decode(file_get_contents("php://input"), true);
@@ -109,36 +118,41 @@ $html = "
 </h2>
 
 <!-- SUMMARY BOX -->
-<div style='background:#111827;padding:25px;border-radius:10px;border:1px solid #334155;margin-bottom:25px;'>
+<div style="background:#111827;padding:25px;border-radius:10px;border:1px solid #334155;margin-bottom:25px;">
 
-        <div style='display:flex; margin-bottom:8px;'>
-            <div style='width:220px;'>USERNAME</div>
-    	<div>=</div>
-    	<div style='margin-left:10px;'>$STUDENT_NAME</div>
-        </div>
-            <div style='width:220px;'>TOTAL QUESTIONS</div>
-            <div>=</div>
-            <div style='margin-left:10px;'>$total</div>
-        </div>
-        <div style='display:flex; margin-bottom:8px;'>
-            <div style='width:220px;'>CORRECT ANSWERS</div>
-            <div>=</div>
-            <div style='margin-left:10px;'>$correct</div>
-        </div>
+<table style="width:100%; color:white; border-collapse:collapse;">
 
-        <div style='display:flex; margin-bottom:8px;'>
-            <div style='width:220px;'>WRONG ANSWERS</div>
-            <div>=</div>
-            <div style='margin-left:10px;'>$wrong</div>
-        </div>
+    <tr>
+        <td style="width:220px; padding:6px;">USERNAME</td>
+        <td style="width:20px;">=</td>
+        <td style="padding:6px;">$STUDENT_NAME</td>
+    </tr>
 
-        <div style='display:flex;'>
-            <div style='width:220px;'>PERCENTAGE</div>
-            <div>=</div>
-            <div style='margin-left:10px;'>$percentage%</div>
-        </div>
+    <tr>
+        <td style="padding:6px;">TOTAL QUESTIONS</td>
+        <td>=</td>
+        <td style="padding:6px;">$total</td>
+    </tr>
 
-    </div>
+    <tr>
+        <td style="padding:6px;">CORRECT ANSWERS</td>
+        <td>=</td>
+        <td style="padding:6px;">$correct</td>
+    </tr>
+
+    <tr>
+        <td style="padding:6px;">WRONG ANSWERS</td>
+        <td>=</td>
+        <td style="padding:6px;">$wrong</td>
+    </tr>
+
+    <tr>
+        <td style="padding:6px;">PERCENTAGE</td>
+        <td>=</td>
+        <td style="padding:6px;">$percentage%</td>
+    </tr>
+
+</table>
 
 </div>
 
@@ -170,15 +184,15 @@ if (count($wrongDetails) == 0) {
 
             <p style='color:#f8fafc;font-size:16px;margin-bottom:8px;'>
                 <b style='color:#f87171;'>Question{$r['qno']}:</b>
-                htmlspecialchars($r['question'], ENT_QUOTES, 'UTF-8')
+                " . htmlspecialchars($r['question'], ENT_QUOTES, 'UTF-8') . "
             </p>
 
             <p style='color:#facc15;font-weight:bold;margin:4px 0;'>
-                Your Answer: htmlspecialchars($r['your_answer'], ENT_QUOTES, 'UTF-8')
+                Your Answer: " . htmlspecialchars($r['your_answer'], ENT_QUOTES, 'UTF-8') . "
             </p>
 
             <p style='color:#22c55e;font-weight:bold;margin:4px 0;'>
-                Correct Answer: htmlspecialchars($r['correct_answer'], ENT_QUOTES, 'UTF-8')
+                Correct Answer: " . htmlspecialchars($r['correct_answer'], ENT_QUOTES, 'UTF-8') . "
             </p>
 
         </div>
@@ -208,9 +222,6 @@ $html .= "
 /* dynamic result file */
 $resultName = str_replace(".json", "", $quizFileName);
 $RESULT_FILE = "/var/www/private_data/quiz/results/" . $resultName . "_result.txt";
-
-/* Student name from Apache Authentication */
-$STUDENT_NAME = $_SERVER['REMOTE_USER'] ?? 'unknown';
 
 /* Date */
 $DATE = date("Y-m-d H:i:s");
