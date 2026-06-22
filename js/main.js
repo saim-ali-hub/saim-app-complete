@@ -245,3 +245,21 @@ window.openItem = openItem;
 window.loadSection = window.loadSection || function () {
     console.error("loadSection missing");
 };
+
+fetch("user.php")
+.then(async r => {
+    const text = await r.text();
+
+    try {
+        return JSON.parse(text);
+    } catch (e) {
+        console.error("user.php invalid response:", text);
+        return { user: null };
+    }
+})
+.then(data => {
+    AppState.currentUser = data.user;
+
+    const el = document.getElementById("currentUser");
+    if (el) el.innerText = data.user || "Guest";
+});
