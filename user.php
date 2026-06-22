@@ -1,7 +1,9 @@
 <?php
-
+session_start();
 header('Content-Type: application/json');
 
 echo json_encode([
-    "user" => $_SERVER['REMOTE_USER'] ?? ''
-]); 
+    "user" => $_SESSION["user"] ?? null
+]);
+exit;
+
