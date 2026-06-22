@@ -32,8 +32,8 @@ function renderQuestions() {
     const data = AppState.currentQuizData;
     const file = AppState.currentQuizFile;
 
-    if (!data || !data.questions) {
-        console.error("Quiz data missing");
+    if (!data || !Array.isArray(data.questions)) {
+        console.error("Invalid quiz data:", data);
         return;
     }
 
@@ -212,28 +212,34 @@ function selectAnswer(element, selected, correctAnswer, index) {
 ============================ */
 
 function validateQuiz() {
+
     let state = AppState.quizStateMap[AppState.currentQuizFile];
+
     if (!AppState.currentUser) {
-        alert("User session not loaded.");
+        alert("User session not ready. Please refresh page.");
         return;
     }
 
     fetch("/api.php?action=quiz", {
         method: "POST",
+        credentials: "include",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
             quiz_file: AppState.currentQuizFile,
-            answers:
-                AppState.quizStateMap[AppState.currentQuizFile].answers
+            user: AppState.currentUser,
+            answers: state.answers
         })
     })
-    .then(res => {
-        if (!res.ok) {
-            throw new Error("HTTP error " + res.status);
+    .then(res => res.text())
+    .then(text => {
+        let data;
+
+        try {
+            data = JSON.parse(text);
+        } catch (e) {
+            data = text; // HTML fallback
         }
-        return res.text();
-    })
-    .then(data => {
+
         document.getElementById("contentArea").innerHTML = `
             <div style="
                 padding:20px;
