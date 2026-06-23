@@ -1,9 +1,9 @@
-
 Aamber Siddiqui
 Adil Hafeez
 Aiman Iqbal
 Aiyza Fakhar
 Alamdar Qanoongo
+Ali Riaz
 Ali Qaiser
 amir
 Amir Test
@@ -33,8 +33,10 @@ Israr Ahmed
 Janit Rashid
 Jasdev Singh
 Khizar Bajwa
+Koser
 Lubna Nazir
 Manal Masud
+Mamoona Ijaz
 Mehedi Hasan
 Mohammad Muneeb
 Muhammad Ammar Idrees
