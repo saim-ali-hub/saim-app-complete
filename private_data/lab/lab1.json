@@ -2,8 +2,8 @@
   "lab_id": "lab1",
   "title": "Lab 1 – 2026",
   "description": "Linux Basic Commands & Navigation",
-  "instructions": "While you in your home directory gather detailed information about your server (taks 1 till 8) and append the output (don't overwrite) into a file named 'server_info' located in your home directory",
-  "commands_covered": [
+  "instructions": "Make sure you are in your home directory. Perform Tasks 1–8 to collect detailed server information. Save the output by appending it to the file 'server_info' in your home directory. Append the output of each task (do not overwrite existing data) to a file named 'server_info' located in your home directory.",
+ "commands_covered": [
     "pwd",
     "ls",
     "ls -l",
