@@ -1,104 +1,276 @@
+
 <?php
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-header("Content-Type: text/plain");
+
+session_start();
+session_write_close();
+
+$STUDENT_NAME =
+    $_SESSION["user"]
+    ?? $_SERVER['REMOTE_ADDR']
+    ?? 'unknown';
+
+/* READ JSON INPUT */
+$data = json_decode(file_get_contents("php://input"), true);
+
+$answers = $data['answers'] ?? [];
+
+/* BASE PATH */
+$base = "/var/www/private_data/quiz/";
+
+/* GET QUIZ FILE NAME */
+$quizFileName = basename($data['quiz_file'] ?? '');
+
+if (!$quizFileName) {
+    die("Quiz file not provided");
+}
+
+/* Validate against approved quiz list */
+$listFile = "/var/www/private_data/quiz/list.json";
+
+if (!file_exists($listFile)) {
+    die("Quiz list missing");
+}
+
+$listData = json_decode(file_get_contents($listFile), true);
+
+$allowed = [];
+
+foreach ($listData as $item) {
+    $allowed[] = $item['file'];
+}
+
+if (!in_array($quizFileName, $allowed, true)) {
+    die("Invalid quiz file");
+}
+
+/* FINAL QUIZ FILE PATH */
+$quizFile = $base . $quizFileName;
+
+/* CHECK FILE EXISTS */
+if (!file_exists($quizFile)) {
+    die("Quiz file not found: " . $quizFile);
+}
+
+/* LOAD QUIZ */
+$quiz = json_decode(file_get_contents($quizFile), true);
+
+if (!$quiz) {
+    die("Invalid quiz JSON");
+}
+
+$titleName = strtoupper(str_replace(".json", "", $quizFileName));
+
+$total = count($quiz['questions']);
+$correct = 0;
+$wrongDetails = [];
+
+/* Evaluation */
+foreach ($quiz['questions'] as $index => $q) {
+
+    $qno = $index + 1;
+
+    $user_answer = $answers["q$index"] ?? "Not Attempted";
+    $correct_answer = $q['answer'];
+
+    if ($user_answer === $correct_answer) {
+        $correct++;
+    } else {
+        $wrongDetails[] = [
+            "qno" => $qno,
+            "question" => $q['question'],
+            "your_answer" => $user_answer,
+            "correct_answer" => $correct_answer
+        ];
+    }
+}
+
+$wrong = $total - $correct;
+$percentage = ($total > 0) ? round(($correct / $total) * 100, 2) : 0;
+
 
 /* =========================
-   1. READ INPUT
+   HTML OUTPUT (CLEAN UI)
 ========================= */
-$rawInput = file_get_contents("php://input");
 
-$input = json_decode($rawInput, true);
+$html = "
 
-if (!$input) {
-    http_response_code(400);
-    die("Invalid JSON input");
+<div style='
+    background:#0f172a;
+    padding:25px;
+    border-radius:12px;
+    max-width:900px;
+    margin:auto;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#f8fafc;
+'>
+
+<!-- TITLE -->
+<h2 style='
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:25px;
+    letter-spacing:1px;
+'>
+    ===== RESULT SUMMARY - $titleName =====
+</h2>
+
+<!-- SUMMARY BOX -->
+<div style="background:#111827;padding:25px;border-radius:10px;border:1px solid #334155;margin-bottom:25px;">
+
+<table style="width:100%; color:white; border-collapse:collapse;">
+
+    <tr>
+        <td style="width:220px; padding:6px;">USERNAME</td>
+        <td style="width:20px;">=</td>
+        <td style="padding:6px;">$STUDENT_NAME</td>
+    </tr>
+
+    <tr>
+        <td style="padding:6px;">TOTAL QUESTIONS</td>
+        <td>=</td>
+        <td style="padding:6px;">$total</td>
+    </tr>
+
+    <tr>
+        <td style="padding:6px;">CORRECT ANSWERS</td>
+        <td>=</td>
+        <td style="padding:6px;">$correct</td>
+    </tr>
+
+    <tr>
+        <td style="padding:6px;">WRONG ANSWERS</td>
+        <td>=</td>
+        <td style="padding:6px;">$wrong</td>
+    </tr>
+
+    <tr>
+        <td style="padding:6px;">PERCENTAGE</td>
+        <td>=</td>
+        <td style="padding:6px;">$percentage%</td>
+    </tr>
+
+</table>
+
+</div>
+
+<!-- WRONG SECTION TITLE -->
+<h3 style='color:#f87171;margin-bottom:15px;border-left:4px solid #ef4444;padding-left:10px;'>
+    WRONG ANSWER REVIEW
+</h3>
+
+";
+
+/* WRONG ANSWERS */
+if (count($wrongDetails) == 0) {
+
+    $html .= "
+
+    <div style='background:#14532d;padding:18px;border-radius:10px;color:white;font-size:18px;font-weight:bold;text-align:center;'>
+        🎉 Excellent! All answers are correct.
+    </div>
+
+    ";
+
+} else {
+
+    foreach ($wrongDetails as $r) {
+
+        $html .= "
+
+        <div style='background:#111827;padding:16px;margin-bottom:12px;border-left:5px solid #ef4444;            border-radius:8px;'>
+
+            <p style='color:#f8fafc;font-size:16px;margin-bottom:8px;'>
+                <b style='color:#f87171;'>Question{$r['qno']}:</b>
+                " . htmlspecialchars($r['question'], ENT_QUOTES, 'UTF-8') . "
+            </p>
+
+            <p style='color:#facc15;font-weight:bold;margin:4px 0;'>
+                Your Answer: " . htmlspecialchars($r['your_answer'], ENT_QUOTES, 'UTF-8') . "
+            </p>
+
+            <p style='color:#22c55e;font-weight:bold;margin:4px 0;'>
+                Correct Answer: " . htmlspecialchars($r['correct_answer'], ENT_QUOTES, 'UTF-8') . "
+            </p>
+
+        </div>
+
+        ";
+    }
 }
+
+/* BACK BUTTON */
+$html .= "
+
+<div style='text-align:center;margin-top:25px;'>
+    <button onclick='location.reload()'
+        style='background:#22c55e;color:white;border:none;padding:12px 22px;border-radius:8px;     cursor:pointer;font-size:16px;font-weight:bold;'>
+        BACK
+    </button>
+</div>
+
+</div>
+
+";
 
 /* =========================
-   2. GET LAB (SAFE)
+   RESULT TABLE LOGGING
 ========================= */
-$lab = basename($input['lab'] ?? '', ".json");
 
-if (!$lab) {
-    http_response_code(400);
-    die("Missing lab");
+/* dynamic result file */
+$resultName = str_replace(".json", "", $quizFileName);
+$RESULT_FILE = "/var/www/private_data/quiz/results/" . $resultName . "_result.txt";
+
+/* Date */
+$DATE = date("Y-m-d H:i:s");
+
+/* Create file with header if not exists */
+if (!file_exists($RESULT_FILE)) {
+
+    $header  = "Result - " . strtoupper($resultName) . "\n";
+    $header .= "=================================================================\n";
+
+    $header .= sprintf(
+        "%-5d %-25s %-22s %-6s %-6s %-10s\n",
+        "Sr.#",
+        "Username",
+        "Date",
+        "Total_Qs",
+        "Correct",
+        "Percentage"
+    );
+
+    $header .= "-----------------------------------------------------------------\n";
+
+    file_put_contents($RESULT_FILE, $header);
 }
 
-/* =========================
-   3. GET USER FROM APACHE
-========================= */
-$user = $_SERVER['REMOTE_USER'] ?? '';
-
-if (!$user) {
-    http_response_code(403);
-    die("Unauthorized - No AD session");
+/* Count existing entries */
+$lines = file($RESULT_FILE, FILE_IGNORE_NEW_LINES);
+$SR_NO = 1;
+if (count($lines) > 3) {
+    $last = end($lines);
+    preg_match('/^\s*(\d+)/', $last, $m);
+    if (!empty($m[1])) {
+        $SR_NO = (int)$m[1] + 1;
+    }
 }
 
-/* ================
-   4. GET MACHINE IP
-================ */
-$ip = $input['ip'] ?? '';
-
-if (!filter_var($ip, FILTER_VALIDATE_IP)) {
-    die("Invalid IP address");
-}
-
-/* =========================
-   5. VALIDATION
-========================= */
-if (!preg_match('/^lab[0-9]+$/', $lab)) {
-    die("Invalid lab format");
-}
-
-/* system user block */
-$blocked_users = ['root','apache','nginx','mysql','bin','daemon'];
-
-if (in_array($user, $blocked_users, true)) {
-    die("System user not allowed");
-}
-
-/* =========================
-   6. SAFE LOGGING (NO RAW INPUT DUMP)
-========================= */
-$logFile = "/var/www/private_data/lab/results/debug.log";
-
-file_put_contents(
-    $logFile,
-    date("Y-m-d H:i:s") . " USER=$user LAB=$lab\n",
-    FILE_APPEND | LOCK_EX
+/* Result row */
+$row = sprintf(
+    "%-5d %-25s %-22s %-6s %-6s %-10s\n",
+    $SR_NO,
+    $STUDENT_NAME,
+    $DATE,
+    $total,
+    $correct,
+    $percentage . "%"
 );
 
-/* =========================
-   7. SAFE EXECUTION (NO SHELL INJECTION)
-========================= */
-$script = "/var/www/private_data/lab/validate_lab.sh";
-
-$cmd = [
-    "sudo",
-    "-n",
-    "/usr/bin/bash",
-    $script,
-    $user,
-    $ip,
-    $lab
-];
-
-$escaped = array_map("escapeshellarg", $cmd);
-
-exec(implode(" ", $escaped) . " 2>&1", $output, $status);
-
-/* ==========================
-   8. RETURN EXECUTION STATUS
-=========================== */
-if ($status !== 0) {
-    http_response_code(500);
-}
-
-/* =========================
-   9. OUTPUT
-========================= */
-echo implode("\n", $output);
+/* Append result */
+file_put_contents($RESULT_FILE, $row, FILE_APPEND | LOCK_EX);
+echo $html;
 
 ?>
