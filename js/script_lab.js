@@ -17,7 +17,7 @@ function loadLabSection() {
     itemList.innerHTML = "<li>Loading labs...</li>";
 
     fetch("get_item.php?section=lab&file=list.json")
-        .then(res => res.json())      
+        .then(res => res.json())
         .then(data => {
 
             if (!Array.isArray(data)) {
@@ -112,16 +112,7 @@ function renderLabQuestions() {
             </div>
         `;
     });
-    html += `
-<div style="margin-top:20px;">
-    <label><b>Machine IP:</b></label><br>
-    <input
-        id="machine_ip"
-        type="text"
-        placeholder="192.168.1.100"
-        style="width:250px;padding:8px;">
-</div>
-`;
+
     html += `
         <button onclick="validateLab()"
             style="margin-top:20px;padding:10px 18px;background:#16a34a;color:white;border:none;border-radius:6px;cursor:pointer;
@@ -155,14 +146,14 @@ function validateLab() {
 
     fetch("api.php?action=lab", {
     method: "POST",
+    credentials: "include",
     headers: {
         "Content-Type": "application/json"
     },
     body: JSON.stringify({
-    lab: AppState.currentLabFile,
-    ip: document.getElementById("machine_ip").value
+        lab: AppState.currentLabFile,
 })
-    
+
 })
     .then(res => res.text())
     .then(data => {
@@ -170,7 +161,7 @@ function validateLab() {
           <div style="padding:20px;background:#0f172a;color:#ffffff;min-height:200px;border-radius:8px">
 
                 <h2 style="color:#38bdf8;">LAB RESULT</h2>
-                <pre style="white-space:pre-wrap;color:#ffffff;background:#111827;padding:10px;               
+                <pre style="white-space:pre-wrap;color:#ffffff;background:#111827;padding:10px;
                         border-radius:6px;overflow:auto;">${data}</pre>
               <br>
               <button onclick="goBack()"
