@@ -1,0 +1,205 @@
+{
+  "title": "QUIZ 8 - Introduction to Cloud",
+  "questions": [
+    {
+      "question": "Which of the following best describes cloud computing?",
+      "options": [
+        "Running applications only on a personal computer",
+        "Delivering IT resources over the internet on demand",
+        "Storing data only on local hard drives",
+        "Using physical servers without virtualization"
+      ],
+      "answer": "Delivering IT resources over the internet on demand"
+    },
+    {
+      "question": "Which pricing model was repeatedly emphasized during the session?",
+      "options": [
+        "Fixed monthly subscription",
+        "Lifetime license",
+        "Pay-as-you-go",
+        "Annual contract only"
+      ],
+      "answer": "Pay-as-you-go"
+    },
+    {
+      "question": "In the Black Friday example, why is cloud computing considered the best solution?",
+      "options": [
+        "It provides free servers",
+        "It permanently adds more hardware",
+        "Businesses only pay for additional resources when needed",
+        "It eliminates internet usage"
+      ],
+      "answer": "Businesses only pay for additional resources when needed"
+    },
+    {
+      "question": "What happens to extra cloud resources after the temporary demand is over?",
+      "options": [
+        "They remain allocated forever",
+        "They are automatically destroyed, and you stop paying for them",
+        "They become physical servers",
+        "They are transferred to another company"
+      ],
+      "answer": "They are automatically destroyed, and you stop paying for them"
+    },
+    {
+      "question": "Why does Netflix prefer using cloud services instead of building its own data centers?",
+      "options": [
+        "It cannot afford servers",
+        "Time and speed are more valuable than building infrastructure",
+        "AWS owns Netflix",
+        "Netflix does not use virtualization"
+      ],
+      "answer": "Time and speed are more valuable than building infrastructure"
+    },
+    {
+      "question": "What is the biggest advantage cloud provides during temporary traffic spikes?",
+      "options": [
+        "Free networking",
+        "Unlimited storage",
+        "On-demand scalability",
+        "Faster CPUs only"
+      ],
+      "answer": "On-demand scalability"
+    },
+    {
+      "question": "What technology forms the foundation of cloud providers like AWS?",
+      "options": [
+        "Blockchain",
+        "Artificial Intelligence",
+        "Virtualization",
+        "DNS"
+      ],
+      "answer": "Virtualization"
+    },
+    {
+      "question": "Which concept is included in cloud economics?",
+      "options": [
+        "Static IP addressing",
+        "Pricing flexibility",
+        "BIOS configuration",
+        "PXE boot"
+      ],
+      "answer": "Pricing flexibility"
+    },
+    {
+      "question": "Which feature ensures services continue running even if part of the infrastructure fails?",
+      "options": [
+        "RAID",
+        "High Availability",
+        "NAT",
+        "DHCP"
+      ],
+      "answer": "High Availability"
+    },
+    {
+      "question": "Does AWS have a limit to its capacity?",
+      "options": [
+        "No, it is infinite",
+        "Yes, but it is so large that reaching it would take years",
+        "AWS only supports 100 servers",
+        "It depends on the operating system"
+      ],
+      "answer": "Yes, but it is so large that reaching it would take years"
+    },
+    {
+      "question": "Do AWS employees freely access customer data?",
+      "options": [
+        "Yes, at any time",
+        "Only administrators can",
+        "No, customer data is protected through strict policies and encryption",
+        "Only during maintenance"
+      ],
+      "answer": "No, customer data is protected through strict policies and encryption"
+    },
+    {
+      "question": "Which feature of cloud computing allows businesses to quickly increase or decrease computing resources based on demand?",
+      "options": [
+        "Fault tolerance",
+        "Scalability",
+        "Encryption",
+        "Replication"
+      ],
+      "answer": "Scalability"
+    },
+    {
+      "question": "Which of the following is a financial advantage of using AWS?",
+      "options": [
+        "Purchasing expensive hardware upfront",
+        "Paying only for the resources you use",
+        "Signing long-term contracts before using services",
+        "Maintaining your own physical data center"
+      ],
+      "answer": "Paying only for the resources you use"
+    },
+    {
+      "question": "Which of the following is NOT a major cloud service provider?",
+      "options": [
+        "Amazon Web Services (AWS)",
+        "Microsoft Azure",
+        "Google Cloud Platform (GCP)",
+        "Red Hat Enterprise Linux (RHEL)"
+      ],
+      "answer": "Red Hat Enterprise Linux (RHEL)"
+    },
+    {
+      "question": "What is the primary purpose of virtualization in cloud computing?",
+      "options": [
+        "To replace the internet",
+        "To run multiple virtual machines on a single physical server",
+        "To permanently increase storage capacity",
+        "To eliminate operating systems"
+      ],
+      "answer": "To run multiple virtual machines on a single physical server"
+    },
+    {
+      "question": "Which AWS pricing model helps organizations reduce infrastructure costs?",
+      "options": [
+        "One-time license purchase",
+        "Pay-as-you-go pricing",
+        "Lifetime subscription",
+        "Fixed hardware investment"
+      ],
+      "answer": "Pay-as-you-go pricing"
+    },
+    {
+      "question": "Which AWS feature enables applications to handle sudden increases in user traffic?",
+      "options": [
+        "Manual hardware upgrades",
+        "Elastic scalability",
+        "Static resource allocation",
+        "Dedicated desktop computers"
+      ],
+      "answer": "Elastic scalability"
+    },
+    {
+      "question": "Why do organizations choose AWS instead of building their own data centers?",
+      "options": [
+        "AWS does not require internet connectivity",
+        "AWS provides on-demand, scalable infrastructure without large upfront hardware investments",
+        "AWS only supports Linux operating systems",
+        "AWS eliminates the need for cybersecurity"
+      ],
+      "answer": "AWS provides on-demand, scalable infrastructure without large upfront hardware investments"
+    },
+    {
+      "question": "Which of the following is a benefit of cloud computing compared to traditional on-premises infrastructure?",
+      "options": [
+        "Longer hardware procurement time",
+        "Faster deployment of applications and services",
+        "Mandatory purchase of physical servers",
+        "Fixed resource capacity"
+      ],
+      "answer": "Faster deployment of applications and services"
+    },
+    {
+      "question": "Which AWS concept refers to designing systems that continue operating despite component failures?",
+      "options": [
+        "Elasticity",
+        "High Availability",
+        "Virtualization",
+        "Billing"
+      ],
+      "answer": "High Availability"
+    }
+  ]
+}
