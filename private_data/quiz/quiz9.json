@@ -1,0 +1,205 @@
+{
+  "title": "QUIZ 9 - AWS & Cloud Computing",
+  "questions": [
+    {
+      "question": "Before cloud computing, where did most companies keep their IT infrastructure?",
+      "options": [
+        "AWS Regions",
+        "Local data centers",
+        "Public cloud providers",
+        "Edge locations"
+      ],
+      "answer": "Local data centers"
+    },
+    {
+      "question": "One major disadvantage of traditional data centers was:",
+      "options": [
+        "Unlimited scalability",
+        "Low infrastructure cost",
+        "High infrastructure cost and maintenance",
+        "Automatic backups"
+      ],
+      "answer": "High infrastructure cost and maintenance"
+    },
+    {
+      "question": "Traditional infrastructure generally had:",
+      "options": [
+        "High redundancy and no downtime",
+        "Very little redundancy and longer downtime",
+        "Unlimited storage",
+        "Automatic scaling"
+      ],
+      "answer": "Very little redundancy and longer downtime"
+    },
+    {
+      "question": "Before cloud computing, organizations were responsible for:",
+      "options": [
+        "Only software installation",
+        "Only networking",
+        "Data backups, encryption, and security requirements",
+        "AWS billing"
+      ],
+      "answer": "Data backups, encryption, and security requirements"
+    },
+    {
+      "question": "Traditional infrastructure was considered:",
+      "options": [
+        "Highly flexible",
+        "Dynamic and automated",
+        "Static and difficult to modify",
+        "Fully serverless"
+      ],
+      "answer": "Static and difficult to modify"
+    },
+    {
+      "question": "Which cloud computing model provides virtual infrastructure?",
+      "options": [
+        "SaaS",
+        "PaaS",
+        "IaaS",
+        "DBaaS"
+      ],
+      "answer": "IaaS"
+    },
+    {
+      "question": "Which cloud computing model provides a platform for developers to build applications?",
+      "options": [
+        "IaaS",
+        "PaaS",
+        "SaaS",
+        "DaaS"
+      ],
+      "answer": "PaaS"
+    },
+    {
+      "question": "Which cloud computing model delivers ready-to-use software over the internet?",
+      "options": [
+        "IaaS",
+        "PaaS",
+        "SaaS",
+        "FaaS"
+      ],
+      "answer": "SaaS"
+    },
+    {
+      "question": "An Availability Zone (AZ) consists of:",
+      "options": [
+        "One data center only",
+        "Two or more data centers",
+        "One AWS Region",
+        "Multiple AWS accounts"
+      ],
+      "answer": "Two or more data centers"
+    },
+    {
+      "question": "The primary purpose of an Availability Zone is:",
+      "options": [
+        "Billing customers",
+        "Fault tolerance and high availability",
+        "Software licensing",
+        "User authentication"
+      ],
+      "answer": "Fault tolerance and high availability"
+    },
+    {
+      "question": "An AWS Region consists of:",
+      "options": [
+        "One Availability Zone",
+        "Two or more Availability Zones",
+        "One Edge Location",
+        "One data center only"
+      ],
+      "answer": "Two or more Availability Zones"
+    },
+    {
+      "question": "Customers usually choose the nearest AWS Region to:",
+      "options": [
+        "Increase storage cost",
+        "Reduce latency",
+        "Increase downtime",
+        "Reduce security"
+      ],
+      "answer": "Reduce latency"
+    },
+    {
+      "question": "Data can be replicated between:",
+      "options": [
+        "Edge Locations only",
+        "Data centers only",
+        "AWS Regions",
+        "User devices only"
+      ],
+      "answer": "AWS Regions"
+    },
+    {
+      "question": "AWS Edge Locations are mainly used to:",
+      "options": [
+        "Store customer backups only",
+        "Reduce latency through caching",
+        "Host virtual machines",
+        "Create Availability Zones"
+      ],
+      "answer": "Reduce latency through caching"
+    },
+    {
+      "question": "AWS Edge Locations are best described as:",
+      "options": [
+        "Database servers",
+        "Caching data centers",
+        "Customer offices",
+        "Development environments"
+      ],
+      "answer": "Caching data centers"
+    },
+    {
+      "question": "Cloud computing can be defined as:",
+      "options": [
+        "Managing only local servers",
+        "Infrastructure provided as a service over the internet",
+        "Building physical data centers",
+        "Manufacturing servers"
+      ],
+      "answer": "Infrastructure provided as a service over the internet"
+    },
+    {
+      "question": "One major benefit of cloud computing is:",
+      "options": [
+        "Increased IT operational costs",
+        "Huge reduction in IT operations",
+        "Increased hardware purchases",
+        "Longer deployment times"
+      ],
+      "answer": "Huge reduction in IT operations"
+    },
+    {
+      "question": "Which deployment model is owned and managed by a single organization?",
+      "options": [
+        "Public Cloud",
+        "Hybrid Cloud",
+        "Private Cloud",
+        "Multi-Cloud"
+      ],
+      "answer": "Private Cloud"
+    },
+    {
+      "question": "Which deployment model provides cloud services over the internet to multiple customers?",
+      "options": [
+        "Private Cloud",
+        "Hybrid Cloud",
+        "Public Cloud",
+        "Community Cloud"
+      ],
+      "answer": "Public Cloud"
+    },
+    {
+      "question": "Which deployment model combines private and public cloud environments?",
+      "options": [
+        "Edge Cloud",
+        "Hybrid Cloud",
+        "Public Cloud",
+        "Private Cloud"
+      ],
+      "answer": "Hybrid Cloud"
+    }
+  ]
+}
