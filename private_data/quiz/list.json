@@ -35,4 +35,8 @@
         "name": "Quiz 9 – AWS & Cloud Computing",
         "file": "quiz9.json"
     },
+    {
+        "name": "Quiz 10 – Hierarchy of AWS Global Infrastructure",
+        "file": "quiz10.json"
+    },
 ]
