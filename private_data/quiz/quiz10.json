@@ -1,0 +1,205 @@
+{
+  "title": "QUIZ 10 - Hierarchy of AWS Global Infrastructure",
+  "questions": [
+    {
+      "question": "What is the primary purpose of an AWS Edge Location?",
+      "options": [
+        "Run EC2 instances",
+        "Host RDS databases",
+        "Cache content closer to users",
+        "Store EBS volumes"
+      ],
+      "answer": "Cache content closer to users"
+    },
+    {
+      "question": "AWS Regions consist of:",
+      "options": [
+        "One Availability Zone",
+        "Multiple Availability Zones",
+        "One Edge Location",
+        "One Local Zone"
+      ],
+      "answer": "Multiple Availability Zones"
+    },
+    {
+      "question": "Which AWS service uses Edge Locations to deliver cached content?",
+      "options": [
+        "EC2",
+        "Lambda",
+        "CloudFront",
+        "Route Tables"
+      ],
+      "answer": "CloudFront"
+    },
+    {
+      "question": "An Availability Zone is:",
+      "options": [
+        "A country",
+        "A geographically isolated data center within a Region",
+        "A CDN",
+        "A VPC"
+      ],
+      "answer": "A geographically isolated data center within a Region"
+    },
+    {
+      "question": "The main purpose of Availability Zones is:",
+      "options": [
+        "Reduce storage cost",
+        "Increase CPU performance",
+        "Provide High Availability",
+        "Increase RAM"
+      ],
+      "answer": "Provide High Availability"
+    },
+    {
+      "question": "Which component is designed to reduce latency?",
+      "options": [
+        "IAM",
+        "CloudTrail",
+        "Edge Location",
+        "EBS"
+      ],
+      "answer": "Edge Location"
+    },
+    {
+      "question": "Latency means:",
+      "options": [
+        "Storage capacity",
+        "Time taken for data to travel between client and server",
+        "Network bandwidth",
+        "CPU utilization"
+      ],
+      "answer": "Time taken for data to travel between client and server"
+    },
+    {
+      "question": "CloudFront improves application performance by:",
+      "options": [
+        "Increasing storage",
+        "Reducing latency using Edge Locations",
+        "Increasing EC2 memory",
+        "Creating more Regions"
+      ],
+      "answer": "Reducing latency using Edge Locations"
+    },
+    {
+      "question": "AWS Regions are:",
+      "options": [
+        "Independent geographic locations",
+        "Load Balancers",
+        "DNS Servers",
+        "Security Groups"
+      ],
+      "answer": "Independent geographic locations"
+    },
+    {
+      "question": "The best Region for deploying an application is usually:",
+      "options": [
+        "The cheapest Region",
+        "Closest to your users",
+        "The newest Region",
+        "The first Region created by AWS"
+      ],
+      "answer": "Closest to your users"
+    },
+    {
+      "question": "Which statement about Availability Zones is TRUE?",
+      "options": [
+        "They share the same power source.",
+        "They are physically isolated from each other.",
+        "They exist outside Regions.",
+        "They are used only for storage."
+      ],
+      "answer": "They are physically isolated from each other."
+    },
+    {
+      "question": "What is the primary benefit of caching?",
+      "options": [
+        "Increase storage size",
+        "Reduce response time",
+        "Increase EC2 memory",
+        "Increase bandwidth"
+      ],
+      "answer": "Reduce response time"
+    },
+    {
+      "question": "Deploying an application across multiple Availability Zones provides:",
+      "options": [
+        "Higher storage capacity",
+        "Fault Tolerance",
+        "More CPU cores",
+        "More IAM permissions"
+      ],
+      "answer": "Fault Tolerance"
+    },
+    {
+      "question": "Which AWS component is closest to end users?",
+      "options": [
+        "Region",
+        "Availability Zone",
+        "Edge Location",
+        "VPC"
+      ],
+      "answer": "Edge Location"
+    },
+    {
+      "question": "Which of the following is an example of static content?",
+      "options": [
+        "Login authentication request",
+        "Image file",
+        "Database insert",
+        "Payment transaction"
+      ],
+      "answer": "Image file"
+    },
+    {
+      "question": "What is the relationship between Regions and Availability Zones?",
+      "options": [
+        "Regions contain multiple Availability Zones.",
+        "Availability Zones contain multiple Regions.",
+        "They are unrelated.",
+        "Regions are inside Edge Locations."
+      ],
+      "answer": "Regions contain multiple Availability Zones."
+    },
+    {
+      "question": "Why should production applications avoid a single Availability Zone?",
+      "options": [
+        "It increases cost.",
+        "It creates a single point of failure.",
+        "It increases bandwidth.",
+        "AWS does not allow it."
+      ],
+      "answer": "It creates a single point of failure."
+    },
+    {
+      "question": "Which AWS infrastructure component is specifically used by CloudFront?",
+      "options": [
+        "Region",
+        "Availability Zone",
+        "Edge Location",
+        "VPC"
+      ],
+      "answer": "Edge Location"
+    },
+    {
+      "question": "A user in Asia accessing an application hosted only in the US may experience:",
+      "options": [
+        "Lower latency",
+        "Higher latency",
+        "Faster caching",
+        "Lower bandwidth usage"
+      ],
+      "answer": "Higher latency"
+    },
+    {
+      "question": "Which statement best summarizes AWS Global Infrastructure?",
+      "options": [
+        "AWS uses a single data center for all customers.",
+        "AWS uses globally distributed Regions, Availability Zones, and Edge Locations to provide scalability, resilience, and low latency.",
+        "AWS only operates in North America.",
+        "AWS stores all customer data in one Region."
+      ],
+      "answer": "AWS uses globally distributed Regions, Availability Zones, and Edge Locations to provide scalability, resilience, and low latency."
+    }
+  ]
+}
