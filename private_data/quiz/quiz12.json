@@ -1,0 +1,205 @@
+{
+  "title": "QUIZ 12 - AWS IAM & MFA",
+  "questions": [
+    {
+      "question": "What does IAM stand for in AWS?",
+      "options": [
+        "Internet Access Management",
+        "Identity and Access Management",
+        "Internal Account Management",
+        "Infrastructure Access Module"
+      ],
+      "answer": "Identity and Access Management"
+    },
+    {
+      "question": "AWS IAM is considered which type of service?",
+      "options": [
+        "Regional service",
+        "Availability Zone service",
+        "Global service",
+        "Edge service"
+      ],
+      "answer": "Global service"
+    },
+    {
+      "question": "What is the primary purpose of AWS IAM?",
+      "options": [
+        "To monitor EC2 performance",
+        "To manage identities and control access to AWS resources",
+        "To store objects",
+        "To create virtual machines"
+      ],
+      "answer": "To manage identities and control access to AWS resources"
+    },
+    {
+      "question": "Which of the following can IAM manage?",
+      "options": [
+        "Users",
+        "Groups",
+        "Roles",
+        "All of the above"
+      ],
+      "answer": "All of the above"
+    },
+    {
+      "question": "What is an IAM User?",
+      "options": [
+        "A physical AWS employee",
+        "A user account created inside AWS",
+        "An EC2 instance",
+        "A database account"
+      ],
+      "answer": "A user account created inside AWS"
+    },
+    {
+      "question": "What is an IAM Group?",
+      "options": [
+        "A collection of AWS accounts",
+        "A collection of IAM users",
+        "A collection of EC2 instances",
+        "A collection of policies only"
+      ],
+      "answer": "A collection of IAM users"
+    },
+    {
+      "question": "What is the advantage of assigning permissions to an IAM group instead of individual users?",
+      "options": [
+        "Users cannot login",
+        "Easier permission management",
+        "Removes authentication requirements",
+        "Makes AWS free"
+      ],
+      "answer": "Easier permission management"
+    },
+    {
+      "question": "What are IAM Policies used for?",
+      "options": [
+        "Creating EC2 instances",
+        "Granting permissions to AWS resources",
+        "Encrypting disks",
+        "Monitoring applications"
+      ],
+      "answer": "Granting permissions to AWS resources"
+    },
+    {
+      "question": "By default, newly created IAM users have:",
+      "options": [
+        "Administrator access",
+        "Read-only access",
+        "No permissions",
+        "Billing access"
+      ],
+      "answer": "No permissions"
+    },
+    {
+      "question": "IAM policies can be attached to:",
+      "options": [
+        "Users only",
+        "Groups only",
+        "Roles only",
+        "Users, Groups, and Roles"
+      ],
+      "answer": "Users, Groups, and Roles"
+    },
+    {
+      "question": "What is MFA in AWS?",
+      "options": [
+        "Multiple File Access",
+        "Multi-Factor Authentication",
+        "Managed Firewall Access",
+        "Multi Function Application"
+      ],
+      "answer": "Multi-Factor Authentication"
+    },
+    {
+      "question": "What is the purpose of MFA?",
+      "options": [
+        "Improve network speed",
+        "Add an additional security layer",
+        "Increase storage capacity",
+        "Reduce AWS cost"
+      ],
+      "answer": "Add an additional security layer"
+    },
+    {
+      "question": "Which users should always have MFA enabled?",
+      "options": [
+        "Regular developers only",
+        "Highly privileged users",
+        "Temporary users only",
+        "Anonymous users"
+      ],
+      "answer": "Highly privileged users"
+    },
+    {
+      "question": "Which IAM component defines what actions a user can perform?",
+      "options": [
+        "Group",
+        "Policy",
+        "Username",
+        "Region"
+      ],
+      "answer": "Policy"
+    },
+    {
+      "question": "Which policy provides full access to AWS services?",
+      "options": [
+        "ReadOnlyAccess",
+        "AdministratorAccess",
+        "PowerUserAccess",
+        "BillingAccess"
+      ],
+      "answer": "AdministratorAccess"
+    },
+    {
+      "question": "Which AWS service is responsible for identity security?",
+      "options": [
+        "IAM",
+        "S3",
+        "EC2",
+        "Route 53"
+      ],
+      "answer": "IAM"
+    },
+    {
+      "question": "Granular access in IAM means:",
+      "options": [
+        "Giving every user full access",
+        "Providing specific permissions required",
+        "Removing authentication",
+        "Blocking all users"
+      ],
+      "answer": "Providing specific permissions required"
+    },
+    {
+      "question": "What happens if an IAM user has no attached policy?",
+      "options": [
+        "User gets administrator access",
+        "User has no AWS resource permissions",
+        "User can access everything",
+        "User becomes root user"
+      ],
+      "answer": "User has no AWS resource permissions"
+    },
+    {
+      "question": "Which statement about IAM pricing is correct?",
+      "options": [
+        "IAM charges per user",
+        "IAM charges monthly fees",
+        "IAM is a free AWS service",
+        "IAM requires EC2 payment"
+      ],
+      "answer": "IAM is a free AWS service"
+    },
+    {
+      "question": "Which is the recommended security model in AWS?",
+      "options": [
+        "Least privilege access",
+        "Everyone gets administrator access",
+        "Shared accounts",
+        "No authentication"
+      ],
+      "answer": "Least privilege access"
+    }
+  ]
+}
