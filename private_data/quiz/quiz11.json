@@ -1,0 +1,205 @@
+{
+  "title": "QUIZ 11 - AWS Billing, CloudWatch & EC2 Fundamentals",
+  "questions": [
+    {
+      "question": "Where can you configure AWS invoice delivery preferences?",
+      "options": [
+        "EC2 Dashboard",
+        "Billing and Cost Management Dashboard",
+        "CloudWatch Dashboard",
+        "IAM Dashboard"
+      ],
+      "answer": "Billing and Cost Management Dashboard"
+    },
+    {
+      "question": "To receive AWS invoices through email, which option should be enabled?",
+      "options": [
+        "Enable CloudWatch Logs",
+        "PDF invoices delivery by email",
+        "Enable EC2 notifications",
+        "Enable IAM notifications"
+      ],
+      "answer": "PDF invoices delivery by email"
+    },
+    {
+      "question": "AWS CloudWatch is primarily used for:",
+      "options": [
+        "Creating users",
+        "Monitoring AWS resources and applications",
+        "Managing passwords",
+        "Creating VPC networks"
+      ],
+      "answer": "Monitoring AWS resources and applications"
+    },
+    {
+      "question": "What does a CloudWatch alarm do?",
+      "options": [
+        "Creates EC2 instances",
+        "Monitors metrics and performs actions based on thresholds",
+        "Creates security groups",
+        "Deletes unused resources automatically"
+      ],
+      "answer": "Monitors metrics and performs actions based on thresholds"
+    },
+    {
+      "question": "EC2 stands for:",
+      "options": [
+        "Elastic Cloud Container",
+        "Elastic Compute Cloud",
+        "Elastic Configuration Control",
+        "Enterprise Compute Cluster"
+      ],
+      "answer": "Elastic Compute Cloud"
+    },
+    {
+      "question": "Amazon EC2 provides:",
+      "options": [
+        "Virtual machines in the cloud",
+        "Physical laptops",
+        "Database passwords",
+        "Network cables"
+      ],
+      "answer": "Virtual machines in the cloud"
+    },
+    {
+      "question": "Which AWS service provides block storage for EC2?",
+      "options": [
+        "S3",
+        "EBS",
+        "IAM",
+        "CloudFront"
+      ],
+      "answer": "EBS"
+    },
+    {
+      "question": "What is the purpose of attaching an EBS volume to EC2?",
+      "options": [
+        "To provide operating system storage",
+        "To create IAM policies",
+        "To monitor billing",
+        "To create DNS records"
+      ],
+      "answer": "To provide operating system storage"
+    },
+    {
+      "question": "Security Groups in AWS are used for:",
+      "options": [
+        "User authentication",
+        "Controlling inbound and outbound network traffic",
+        "Storing files",
+        "Monitoring costs"
+      ],
+      "answer": "Controlling inbound and outbound network traffic"
+    },
+    {
+      "question": "Security Groups operate at which level?",
+      "options": [
+        "EC2 instance level",
+        "AWS account level",
+        "Billing level",
+        "Region level only"
+      ],
+      "answer": "EC2 instance level"
+    },
+    {
+      "question": "Which rule allows SSH access to an EC2 Linux instance?",
+      "options": [
+        "HTTP port 80",
+        "HTTPS port 443",
+        "SSH port 22",
+        "FTP port 21"
+      ],
+      "answer": "SSH port 22"
+    },
+    {
+      "question": "What is required to securely connect to an EC2 instance using SSH?",
+      "options": [
+        "Password only",
+        "Key pair",
+        "Billing account",
+        "CloudWatch alarm"
+      ],
+      "answer": "Key pair"
+    },
+    {
+      "question": "Which EC2 pricing model has no long-term commitment?",
+      "options": [
+        "Reserved Instance",
+        "Dedicated Host",
+        "On-Demand Instance",
+        "Savings Plan"
+      ],
+      "answer": "On-Demand Instance"
+    },
+    {
+      "question": "On-Demand instances are best suited for:",
+      "options": [
+        "Predictable workloads requiring long contracts",
+        "Short-term and unpredictable workloads",
+        "Compliance workloads only",
+        "Hardware licensing requirements"
+      ],
+      "answer": "Short-term and unpredictable workloads"
+    },
+    {
+      "question": "Reserved Instances usually require:",
+      "options": [
+        "No commitment",
+        "1–3 year commitment",
+        "Daily payment only",
+        "Hardware purchase"
+      ],
+      "answer": "1–3 year commitment"
+    },
+    {
+      "question": "Reserved Instances provide:",
+      "options": [
+        "Higher network speed only",
+        "Significant cost savings",
+        "Free EC2 usage forever",
+        "Dedicated physical servers"
+      ],
+      "answer": "Significant cost savings"
+    },
+    {
+      "question": "Reserved Instances are best for:",
+      "options": [
+        "Stable predictable applications",
+        "Temporary testing only",
+        "Random workloads",
+        "Short experiments"
+      ],
+      "answer": "Stable predictable applications"
+    },
+    {
+      "question": "Spot Instances are:",
+      "options": [
+        "The most expensive EC2 option",
+        "Discounted unused EC2 capacity",
+        "Physical servers",
+        "Database instances"
+      ],
+      "answer": "Discounted unused EC2 capacity"
+    },
+    {
+      "question": "Spot Instances are ideal for workloads that:",
+      "options": [
+        "Cannot tolerate interruption",
+        "Have flexible start and stop times",
+        "Require dedicated hardware",
+        "Need fixed pricing"
+      ],
+      "answer": "Have flexible start and stop times"
+    },
+    {
+      "question": "What can happen to Spot Instances?",
+      "options": [
+        "They can be interrupted by AWS",
+        "They never stop",
+        "They become Dedicated Hosts automatically",
+        "They delete your AWS account"
+      ],
+      "answer": "They can be interrupted by AWS"
+    }
+  ]
+}
