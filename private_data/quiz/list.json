@@ -39,4 +39,12 @@
         "name": "Quiz 10 – Hierarchy of AWS Global Infrastructure",
         "file": "quiz10.json"
     },
+    {
+        "name": "Quiz 11 – AWS Billing, CloudWatch & EC2 Fundamentals",
+        "file": "quiz11.json"
+    },
+    {
+        "name": "Quiz 12 - AWS IAM & MFA",
+        "file": "quiz12.json"
+    },
 ]
