@@ -1,0 +1,370 @@
+{
+  "lab_id": "lab105",
+  "title": "lab 105 - 2026",
+  "description": "Amazon S3 Storage Management",
+
+  "lab_objective": {
+    "description": "By the end of this lab, you will be able to:",
+    "objectives": [
+      "Understand Amazon S3 object storage concepts.",
+      "Create and configure an S3 bucket.",
+      "Upload objects to an S3 bucket.",
+      "Understand bucket-level and object-level permissions.",
+      "Configure S3 Block Public Access settings.",
+      "Manage S3 Bucket Policies.",
+      "Understand and configure Object ACLs.",
+      "Test access permissions using different IAM users.",
+      "Apply the Principle of Least Privilege.",
+      "Delete S3 resources to avoid unnecessary charges."
+    ]
+  },
+
+  "scenario": {
+    "description": "Your company wants to implement Amazon S3 for storing application files and documents.",
+
+    "administrator_tasks": [
+      "Create a secure S3 bucket.",
+      "Upload company files.",
+      "Configure permissions.",
+      "Provide controlled access to different users."
+    ],
+
+    "required_users": [
+      {
+        "user": "John",
+        "department": "Application Team",
+        "requirement": "Upload and download files"
+      },
+      {
+        "user": "Sarah",
+        "department": "Audit Team",
+        "requirement": "Read-only access"
+      },
+      {
+        "user": "David",
+        "department": "Public Website Team",
+        "requirement": "Manage public objects"
+      }
+    ]
+  },
+
+  "prerequisites": [
+    "AWS Account",
+    "IAM Administrator access",
+    "AWS Console access",
+    "Root user MFA enabled (Recommended)"
+  ],
+
+  "tasks": [
+
+    {
+      "task_number": 1,
+      "title": "Login to AWS Management Console",
+
+      "steps": [
+        "Open browser.",
+        "Navigate to https://console.aws.amazon.com",
+        "Login using AWS credentials."
+      ],
+
+      "note": "Cool!!! After login you will see the AWS Console."
+    },
+
+    {
+      "task_number": 2,
+      "title": "Select AWS Region",
+
+      "region": "US East (N. Virginia) us-east-1",
+
+      "instruction": "Keep the same region throughout this lab."
+    },
+
+    {
+      "task_number": 3,
+      "title": "Navigate to Amazon S3",
+
+      "navigation": [
+        "Search for S3",
+        "Open S3 Console"
+      ],
+
+      "observe": [
+        "Buckets",
+        "Access Points",
+        "Storage Lens",
+        "Lifecycle Rules"
+      ]
+    },
+
+    {
+      "task_number": 4,
+      "title": "Create an S3 Bucket",
+
+      "steps": [
+        "Click Create bucket.",
+        "Make sure AWS Region is US East (N. Virginia) us-east-1.",
+        "Select Bucket type General purpose.",
+        "Select Account Regional namespace.",
+        "Enter bucket name linoop-data-bucket."
+      ],
+
+      "bucket_configuration": {
+        "bucket_type": "General purpose",
+        "namespace": "Account Regional namespace",
+        "bucket_name": "linoop-data-bucket"
+      }
+    },
+
+    {
+      "task_number": 5,
+      "title": "Configure Object Ownership",
+
+      "setting": "ACLs disabled",
+
+      "reason": "AWS recommends using IAM Policies and Bucket Policies instead of ACLs."
+    },
+
+    {
+      "task_number": 6,
+      "title": "Configure Public Access Settings",
+
+      "setting": "Block all public access",
+
+      "status": "Enabled",
+
+      "reason": "Protects bucket from accidental public exposure."
+    },
+
+    {
+      "task_number": 7,
+      "title": "Create Bucket and Verify",
+
+      "steps": [
+        "Click Create bucket.",
+        "Verify bucket is available in S3 Console."
+      ]
+    },
+
+    {
+      "task_number": 8,
+      "title": "Upload Objects to S3 Bucket",
+
+      "files_to_create": [
+        "public.txt",
+        "private.txt",
+        "backup.txt"
+      ],
+
+      "steps": [
+        "Open bucket.",
+        "Click Upload.",
+        "Upload all three files.",
+        "Verify files are visible inside the bucket."
+      ]
+    },
+
+    {
+      "task_number": 9,
+      "title": "View Object Details",
+
+      "object": "public.txt",
+
+      "observe": [
+        "Object URL",
+        "Size",
+        "Storage Class",
+        "Last Modified Date",
+        "Version ID"
+      ]
+    },
+
+    {
+      "task_number": 10,
+      "title": "Change Object Storage Class",
+
+      "object": "backup.txt",
+
+      "steps": [
+        "Select backup.txt.",
+        Navigate to "Actions > Change storage class.",
+        "Change storage class to S3 Standard-IA."
+      ],
+
+      "comparison": [
+        "S3 Standard",
+        "S3 Standard-IA"
+      ]
+    },
+
+    {
+      "task_number": 11,
+      "title": "Configure Bucket Policy",
+
+      "navigation": [
+        "Bucket",
+        "Permissions",
+        "Bucket Policy"
+      ],
+
+      "purpose": "Allow public read access only for public.txt.",
+
+      "policy_example": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::company-training-data-2026-001/public.txt"
+          }
+        ]
+      }
+    },
+
+    {
+      "task_number": 12,
+      "title": "Test Public Access",
+
+      "tests": [
+        {
+          "object": "public.txt",
+          "expected_result": "File content displayed"
+        },
+        {
+          "object": "private.txt",
+          "expected_result": "Access Denied"
+        }
+      ]
+    },
+
+    {
+      "task_number": 13,
+      "title": "Configure IAM User Access",
+
+      "groups": [
+        {
+          "group_name": "S3-Developers",
+          "policy": "AmazonS3FullAccess",
+          "users": [
+            "john"
+          ]
+        },
+        {
+          "group_name": "S3-Auditors",
+          "policy": "AmazonS3ReadOnlyAccess",
+          "users": [
+            "sarah"
+          ]
+        }
+      ]
+    },
+
+    {
+      "task_number": 14,
+      "title": "Test IAM Permissions",
+
+      "users": [
+        {
+          "user": "john",
+
+          "tests": [
+            {
+              "action": "Upload Object",
+              "expected_result": "Allowed"
+            },
+            {
+              "action": "Delete Object",
+              "expected_result": "Allowed"
+            }
+          ]
+        },
+
+        {
+          "user": "Sarah",
+
+          "tests": [
+            {
+              "action": "Download Object",
+              "expected_result": "Allowed"
+            },
+            {
+              "action": "Upload Object",
+              "expected_result": "Access Denied"
+            },
+            {
+              "action": "Delete Object",
+              "expected_result": "Access Denied"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "task_number": 15,
+      "title": "Configure Object ACL",
+
+      "navigation": [
+        "Bucket",
+        "Object",
+        "Permissions"
+      ],
+
+      "configuration": {
+        "feature": "Object ACL",
+        "setting": "Enable ACLs",
+        "permission": "Everyone Read Access"
+      },
+
+      "test": {
+        "action": "Open object URL from browser",
+        "expected_result": "Object accessible publicly"
+      }
+    },
+
+    {
+      "task_number": 16,
+      "title": "Enable Block Public Access",
+
+      "navigation": [
+        "Bucket",
+        "Permissions",
+        "Block Public Access"
+      ],
+
+      "setting": "Block all public access",
+
+      "test": {
+        "action": "Access public object again",
+        "expected_result": "Access Denied"
+      }
+    },
+
+    {
+      "task_number": 17,
+      "title": "Delete S3 Objects",
+
+      "objects_to_delete": [
+        "public.txt",
+        "private.txt",
+        "backup.txt"
+      ]
+    },
+
+    {
+      "task_number": 18,
+      "title": "Delete S3 Bucket",
+
+      "navigation": [
+        "S3 Console",
+        "Bucket",
+        "Delete Bucket"
+      ],
+
+      "confirmation": "Enter bucket name linoop-data-bucket and confirm deletion."
+    }
+
+  ],
+
+  "completion_message": "Cool!!!! Great Job. You have successfully completed AWS S3 Storage Management Lab."
+}
