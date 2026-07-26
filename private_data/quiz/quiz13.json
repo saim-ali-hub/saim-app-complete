@@ -1,0 +1,205 @@
+{
+  "title": "QUIZ 13 - AWS S3 Storage",
+  "questions": [
+    {
+      "question": "What does S3 stand for in AWS?",
+      "options": [
+        "Secure Storage System",
+        "Simple Storage Service",
+        "Scalable Storage Solution",
+        "Standard Storage Service"
+      ],
+      "answer": "Simple Storage Service"
+    },
+    {
+      "question": "Can you install an operating system directly on Amazon S3?",
+      "options": [
+        "Yes",
+        "No",
+        "Only Linux",
+        "Only Windows"
+      ],
+      "answer": "No"
+    },
+    {
+      "question": "In S3, data is stored inside:",
+      "options": [
+        "Volumes",
+        "Partitions",
+        "Buckets",
+        "Instances"
+      ],
+      "answer": "Buckets"
+    },
+    {
+      "question": "What makes object storage different from block storage?",
+      "options": [
+        "Objects contain metadata and unique identifiers",
+        "Objects require partitions",
+        "Objects need an operating system",
+        "Objects cannot store files"
+      ],
+      "answer": "Objects contain metadata and unique identifiers"
+    },
+    {
+      "question": "Which S3 storage class is designed for frequently accessed data?",
+      "options": [
+        "Glacier Deep Archive",
+        "S3 Standard",
+        "One Zone-IA",
+        "Glacier Flexible Retrieval"
+      ],
+      "answer": "S3 Standard"
+    },
+    {
+      "question": "What does IA mean in S3 Standard-IA?",
+      "options": [
+        "Internet Access",
+        "Infrequent Access",
+        "Internal Archive",
+        "Immediate Availability"
+      ],
+      "answer": "Infrequent Access"
+    },
+    {
+      "question": "Which S3 storage class stores data in only one Availability Zone?",
+      "options": [
+        "S3 Standard",
+        "S3 One Zone-IA",
+        "Glacier",
+        "Intelligent-Tiering"
+      ],
+      "answer": "S3 One Zone-IA"
+    },
+    {
+      "question": "Why is S3 One Zone-IA cheaper?",
+      "options": [
+        "It has lower durability",
+        "It stores data in only one AZ",
+        "It has no encryption",
+        "It does not support objects"
+      ],
+      "answer": "It stores data in only one AZ"
+    },
+    {
+      "question": "Which S3 storage class is mainly used for archival?",
+      "options": [
+        "Standard",
+        "Glacier",
+        "One Zone-IA",
+        "Intelligent-Tiering"
+      ],
+      "answer": "Glacier"
+    },
+    {
+      "question": "Which S3 storage class provides the lowest storage cost?",
+      "options": [
+        "Standard",
+        "Standard-IA",
+        "Glacier Deep Archive",
+        "Intelligent-Tiering"
+      ],
+      "answer": "Glacier Deep Archive"
+    },
+    {
+      "question": "Which S3 class automatically moves objects between access tiers?",
+      "options": [
+        "Glacier",
+        "Intelligent-Tiering",
+        "One Zone-IA",
+        "Standard"
+      ],
+      "answer": "Intelligent-Tiering"
+    },
+    {
+      "question": "Glacier Deep Archive is best for:",
+      "options": [
+        "Website images",
+        "Active databases",
+        "Long-term compliance archives",
+        "EC2 applications"
+      ],
+      "answer": "Long-term compliance archives"
+    },
+    {
+      "question": "Which policy is attached directly to an S3 bucket?",
+      "options": [
+        "IAM Policy",
+        "Bucket Policy",
+        "User Policy",
+        "Role Policy"
+      ],
+      "answer": "Bucket Policy"
+    },
+    {
+      "question": "Bucket policies can control:",
+      "options": [
+        "Only bucket creation",
+        "Only billing",
+        "Bucket and object access",
+        "EC2 permissions"
+      ],
+      "answer": "Bucket and object access"
+    },
+    {
+      "question": "Object ACL controls access to:",
+      "options": [
+        "Entire AWS account",
+        "Individual objects",
+        "EC2 instances",
+        "IAM users"
+      ],
+      "answer": "Individual objects"
+    },
+    {
+      "question": "If a bucket is public, are all objects automatically public?",
+      "options": [
+        "Yes",
+        "No",
+        "Only images",
+        "Only text files"
+      ],
+      "answer": "No"
+    },
+    {
+      "question": "AWS recommends using which approach instead of object ACLs?",
+      "options": [
+        "Bucket policies and IAM policies",
+        "Public buckets",
+        "Anonymous users",
+        "No encryption"
+      ],
+      "answer": "Bucket policies and IAM policies"
+    },
+    {
+      "question": "Which S3 feature copies objects between AWS Regions?",
+      "options": [
+        "Lifecycle Rule",
+        "Cross-Region Replication",
+        "Versioning",
+        "ACL"
+      ],
+      "answer": "Cross-Region Replication"
+    },
+    {
+      "question": "If you replicate S3 data to another AWS Region, what happens?",
+      "options": [
+        "Only a pointer is created",
+        "A real copy is created in the destination region",
+        "Data is deleted from source",
+        "No storage is used"
+      ],
+      "answer": "A real copy is created in the destination region"
+    },
+    {
+      "question": "What is the main difference between S3 and EBS?",
+      "options": [
+        "EBS stores objects",
+        "Both are identical",
+        "S3 is object storage, EBS is block storage",
+        "S3 runs operating systems"
+      ],
+      "answer": "S3 is object storage, EBS is block storage"
+    }
+  ]
+}
