@@ -47,4 +47,8 @@
         "name": "Quiz 12 - AWS IAM & MFA",
         "file": "quiz12.json"
     },
+    {
+        "name": "Quiz 13 - AWS S3 Storage",
+        "file": "quiz13.json"
+    },
 ]
