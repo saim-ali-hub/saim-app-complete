@@ -6,5 +6,25 @@
     {
         "name": "Lab2 - Linux Filesystem Management",
         "file": "lab2.json"
+    },
+    {
+        "name": "Lab101 - Launch an AWS EC2 Linux Instance (Amazon Linux 2023)",
+        "file": "lab101-2026.json"
+    },
+    {
+        "name": "Lab102 - Launch Multiple AWS EC2 Linux Instances",
+        "file": "lab102-2026.json"
+    },
+    {
+        "name": "Lab103 - AWS IAM Users, Groups, and Policies",
+        "file": "lab103-2026.json"
+    },
+    {
+        "name": "Lab104 - AWS IAM Users, Groups, and Policies",
+        "file": "lab104-2026.json"
+    },
+    {
+        "name": "Lab105 - Amazon S3 Storage Management",
+        "file": "lab105-2026.json"
     }
 ]
