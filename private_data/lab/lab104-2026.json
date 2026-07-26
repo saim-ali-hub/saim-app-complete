@@ -1,0 +1,130 @@
+{
+  "lab_id": "lab104",
+  "title": "lab 104 - 2026",
+  "description": "AWS IAM Users, Groups, and Policies",
+
+  "lab_objective": {
+    "description": "In this lab you learn:",
+    "objectives": [
+      "Create and manage IAM users and groups.",
+      "Assign permissions using AWS managed policies.",
+      "Apply the Principle of Least Privilege.",
+      "Differentiate between Full Access, Read-only, and Service-specific policies.",
+      "Understand why permissions should be managed through groups rather than individual users.",
+      "Interpret effective permissions when users belong to multiple groups."
+    ]
+  },
+
+  "tasks": [
+    {
+      "task_number": 1,
+      "title": "Explore IAM Policy Types",
+
+      "navigation": [
+        "Navigate to IAM > Policies"
+      ],
+
+      "find_policies": [
+        "AmazonEC2FullAccess",
+        "AmazonS3FullAccess",
+        "ReadOnlyAccess"
+      ],
+
+      "determine": [
+        "AWS Managed or Customer Managed",
+        "Number of attached entities",
+        "Policy Version"
+      ],
+
+      "record": "Record findings."
+    },
+
+    {
+      "task_number": 2,
+      "title": "Create Support Team Group",
+
+      "steps": [
+        "Create a new group named Support Team",
+        "Attach AmazonEC2ReadOnlyAccess policy to Support Team group",
+        "Create user support1",
+        "Assign user support1 to Support Team group"
+      ]
+    },
+
+    {
+      "task_number": 3,
+      "title": "Verify Support User Permissions",
+
+      "user": "support1",
+
+      "permissions_test": [
+        {
+          "action": "View EC2",
+          "expected_result": "Allowed"
+        },
+        {
+          "action": "Launch EC2",
+          "expected_result": "Denied"
+        },
+        {
+          "action": "Terminate EC2",
+          "expected_result": "Denied"
+        }
+      ]
+    },
+
+    {
+      "task_number": 4,
+      "title": "Challenge Labs",
+
+      "challenges": [
+        {
+          "challenge_number": 1,
+          "title": "Developer User Access",
+
+          "requirement": "Without creating a new policy, create user developer1",
+
+          "user": "developer1",
+
+          "permissions_required": [
+            "Can launch EC2",
+            "Cannot manage S3",
+            "Cannot manage IAM"
+          ],
+
+          "hint": "Use an existing AWS managed policy."
+        },
+
+        {
+          "challenge_number": 2,
+          "title": "Intern User Access",
+
+          "requirement": "Without creating a new policy, create user intern1",
+
+          "user": "intern1",
+
+          "permissions_required": [
+            "View everything",
+            "Cannot create anything",
+            "Cannot delete anything"
+          ]
+        },
+
+        {
+          "challenge_number": 3,
+          "title": "Backup Administrator Access",
+
+          "requirement": "Without creating a new policy, create user backupadmin1",
+
+          "user": "backupadmin1",
+
+          "permissions_required": [
+            "Full S3 Access",
+            "Read-only EC2",
+            "No IAM access"
+          ]
+        }
+      ]
+    }
+  ]
+}
