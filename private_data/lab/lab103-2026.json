@@ -1,0 +1,225 @@
+{
+  "lab_id": "lab 103",
+  "title": "lab 103 - 2026",
+  "description": "AWS IAM Users, Groups, and Policies",
+
+  "lab_objective": {
+    "description": "In this lab, you will learn how to:",
+    "objectives": [
+      "Create IAM Users",
+      "Create IAM Groups",
+      "Add users to groups",
+      "Assign AWS managed policies",
+      "Test permissions",
+      "Remove permissions",
+      "Follow the Principle of Least Privilege"
+    ]
+  },
+
+  "scenario": {
+    "description": "Your company has hired three new employees. As the AWS Administrator, your task is to create the required users, groups, and permissions.",
+    "employees": [
+      {
+        "employee": "John",
+        "department": "Linux Team",
+        "job_role": "EC2 Administrator"
+      },
+      {
+        "employee": "Sarah",
+        "department": "Storage Team",
+        "job_role": "S3 Administrator"
+      },
+      {
+        "employee": "David",
+        "department": "Audit Team",
+        "job_role": "Read-only Auditor"
+      }
+    ]
+  },
+
+  "prerequisites": [
+    "AWS Account",
+    "Root user login",
+    "MFA enabled on Root account (Recommended)"
+  ],
+
+  "tasks": [
+    {
+      "task_number": 1,
+      "title": "Login to AWS Console",
+      "steps": [
+        "Login to AWS Console using the Root account."
+      ]
+    },
+
+    {
+      "task_number": 2,
+      "title": "Navigate to IAM",
+      "steps": [
+        "Open AWS Console > IAM > Dashboard",
+        "Observe Users > Groups > Roles > Policies"
+      ]
+    },
+
+    {
+      "task_number": 3,
+      "title": "Create IAM Groups",
+      "groups": [
+        "Linux Admins",
+        "Storage Admins",
+        "Auditors"
+      ],
+      "verification": "Verify all groups appear under IAM > User Groups"
+    },
+
+    {
+      "task_number": 4,
+      "title": "Create IAM Users",
+      "users": [
+        "John",
+        "Sarah",
+        "David"
+      ],
+      "user_creation_steps": [
+        "Select Provide user access to the AWS Management Console",
+        "Choose I want to create an IAM user",
+        "Set a custom password (Example: Welcome@123)",
+        "Enable Require password reset at the next sign-in",
+        "Click Next to continue"
+      ]
+    },
+
+    {
+      "task_number": 5,
+      "title": "Add Users to Groups",
+      "group_membership": [
+        {
+          "user": "john",
+          "group": "Linux Admins"
+        },
+        {
+          "user": "sarah",
+          "group": "Storage Admins"
+        },
+        {
+          "user": "david",
+          "group": "Auditors"
+        }
+      ],
+      "verification": "Verify each user belongs to the correct group."
+    },
+
+    {
+      "task_number": 6,
+      "title": "Attach AWS Managed Policies",
+      "policies": [
+        {
+          "group": "Linux Admins",
+          "policy": "AmazonEC2FullAccess"
+        },
+        {
+          "group": "Storage Admins",
+          "policy": "AmazonS3FullAccess"
+        },
+        {
+          "group": "Auditors",
+          "policy": "ReadOnlyAccess"
+        }
+      ],
+      "important_note": "Do not attach policies directly to users. Use groups only."
+    },
+
+    {
+      "task_number": 7,
+      "title": "Verify Permissions",
+      "steps": [
+        {
+          "user": "john",
+          "actions": [
+            "Download the sign-in credentials",
+            "Open an Incognito browser",
+            "Login as user john",
+            "Attempt to Launch an EC2 Instance",
+            "Attempt to View S3 Buckets",
+            "Record observations and Logout"
+          ]
+        },
+
+        {
+          "user": "sarah",
+          "actions": [
+            "Open an Incognito browser",
+            "Login as user sarah",
+            "Attempt to Create an S3 Bucket",
+            "Attempt to Launch an EC2 Instance",
+            "Record observations and Logout"
+          ]
+        },
+
+        {
+          "user": "david",
+          "actions": [
+            "Open an Incognito browser",
+            "Login as user david",
+            "Attempt to View EC2",
+            "Attempt to View S3",
+            "Attempt to Create EC2",
+            "Attempt to Delete S3 Bucket",
+            "Record observations and Logout"
+          ]
+        }
+      ]
+    },
+
+    {
+      "task_number": 8,
+      "title": "Modify Group Membership",
+      "remove_user": {
+        "steps": [
+          "Remove user John from Linux Admins group",
+          "Login again and attempt to Launch an EC2 Instance",
+          "Observe the result"
+        ]
+      },
+      "add_user_back": {
+        "steps": [
+          "Add user John back to Linux Admins group",
+          "Login again and verify EC2 access has been restored"
+        ]
+      }
+    },
+
+    {
+      "task_number": 9,
+      "title": "Compare Policies",
+      "comparison_table": {
+        "columns": [
+          "Policy",
+          "Launch EC2",
+          "Stop EC2",
+          "View EC2"
+        ],
+        "rows": [
+          {
+            "policy": "AmazonEC2FullAccess",
+            "launch_ec2": "",
+            "stop_ec2": "",
+            "view_ec2": ""
+          },
+          {
+            "policy": "AmazonEC2ReadOnlyAccess",
+            "launch_ec2": "",
+            "stop_ec2": "",
+            "view_ec2": ""
+          },
+          {
+            "policy": "ReadOnlyAccess",
+            "launch_ec2": "",
+            "stop_ec2": "",
+            "view_ec2": ""
+          }
+        ]
+      }
+    }
+  ]
+}
