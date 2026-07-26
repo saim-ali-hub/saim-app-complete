@@ -1,0 +1,291 @@
+{
+  "lab_id": "lab102",
+  "title": "lab 102 - 2026",
+  "description": "Launch Multiple AWS EC2 Linux Instances",
+
+  "lab_objective": {
+    "description": "By the end of this lab, you will be able to:",
+    "objectives": [
+      "Log in to the AWS Management Console",
+      "Create two EC2 Linux instances where Apache HTTP Server (httpd) is already installed and running",
+      "Create a Linux user named john automatically during instance launch",
+      "Configure instance automatically using an EC2 User Data script",
+      "Configure networking and security",
+      "Connect to the instance using SSH",
+      "Connect to webservers from browser",
+      "Verify the instances are working",
+      "Terminate the instances to avoid unnecessary charges"
+    ]
+  },
+
+  "tasks": [
+    {
+      "task_number": 1,
+      "title": "Login to AWS Management Console",
+      "steps": [
+        "Open your browser",
+        "Go to https://console.aws.amazon.com",
+        "Login using your AWS credentials",
+        "After login you will see the AWS Console"
+      ]
+    },
+
+    {
+      "task_number": 2,
+      "title": "Select AWS Region",
+      "region": {
+        "name": "US East (N. Virginia)",
+        "code": "us-east-1"
+      },
+      "instruction": "Keep the same region throughout the lab."
+    },
+
+    {
+      "task_number": 3,
+      "title": "Open EC2 Dashboard",
+      "steps": [
+        "Search for EC2",
+        "Open the EC2 Dashboard"
+      ]
+    },
+
+    {
+      "task_number": 4,
+      "title": "Launch EC2 Instance",
+
+      "steps": [
+        "Click Launch Instance"
+      ],
+
+      "instance_configuration": {
+        "name": "myweb01",
+        "ami": "Red Hat Enterprise Linux 9",
+        "architecture": "64-bit (x86)",
+        "instance_type": "t3.micro"
+      }
+    },
+
+    {
+      "task_number": 5,
+      "title": "Create Key Pair",
+
+      "key_pair": {
+        "name": "myweb01-key",
+        "type": "RSA",
+        "private_key_format": ".pem"
+      },
+
+      "steps": [
+        "Create a new Key Pair",
+        "Download and save the key pair"
+      ]
+    },
+
+    {
+      "task_number": 6,
+      "title": "Configure Network Settings",
+
+      "network_configuration": {
+        "vpc": "Default VPC",
+        "subnet": "Public Subnet",
+        "auto_assign_public_ip": "Enabled"
+      }
+    },
+
+    {
+      "task_number": 7,
+      "title": "Create Security Group",
+
+      "security_group": {
+        "name": "myweb-sg1",
+
+        "inbound_rules": [
+          {
+            "type": "SSH",
+            "protocol": "TCP",
+            "port": "22",
+            "source": "My IP"
+          },
+          {
+            "type": "HTTP",
+            "protocol": "TCP",
+            "port": "80",
+            "source": "0.0.0.0/0"
+          }
+        ]
+      }
+    },
+
+    {
+      "task_number": 8,
+      "title": "Configure Storage",
+
+      "storage": {
+        "volume_size": "8 GB",
+        "volume_type": "gp3"
+      },
+
+      "instruction": "Leave the default storage configuration."
+    },
+
+    {
+      "task_number": 9,
+      "title": "Configure EC2 User Data Script",
+
+      "location": "Click Advanced Details and scroll down to User data (optional)",
+
+      "script": "#!/bin/bash\n\n# Install Apache Web Server\ndnf install httpd -y\n\n# Start and enable Apache service\nsystemctl start httpd\nsystemctl enable httpd\n\n# Create default web page\necho \"<h1>Welcome to my AWS Web Server</h1>\" > /var/www/html/index.html\n\n# Create Linux user\nuseradd john"
+    },
+
+    {
+      "task_number": 10,
+      "title": "Launch Two EC2 Instances",
+
+      "steps": [
+        "Under Number of instances, change the value from 1 to 2",
+        "Click Launch Instance"
+      ],
+
+      "expected_result": "Two EC2 instances should be created using the same configuration and User Data script."
+    },
+
+    {
+      "task_number": 11,
+      "title": "Verify Instance Status",
+
+      "steps": [
+        "Open the Instances page",
+        "Wait until both instances are running"
+      ],
+
+      "verification": [
+        "Instance State: Running",
+        "Status Checks: 2/2 Passed",
+        "Some instance types may display 3/3 checks passed"
+      ]
+    },
+
+    {
+      "task_number": 12,
+      "title": "Update Instance Tags",
+
+      "steps": [
+        "Keep the first instance name unchanged as myweb01",
+        "Change the second instance tag/name to myweb02"
+      ],
+
+      "purpose": "Identify both instances separately."
+    },
+
+    {
+      "task_number": 13,
+      "title": "Copy Public IPv4 Addresses",
+
+      "instruction": "Copy the Public IPv4 Address of both instances for SSH connection and web testing."
+    },
+
+    {
+      "task_number": 14,
+      "title": "Connect to EC2 Instances Using Private Key",
+
+      "connection_method": {
+        "tool": "Mobaxterm",
+        "mac_users": "Use Terminal"
+      },
+
+      "steps": [
+        "Open Mobaxterm",
+        "Click Session",
+        "Click SSH",
+        "Add Public IP of EC2 instance as Remote host",
+        "Enter username ec2-user",
+        "Open Advanced SSH settings",
+        "Enable Use private key",
+        "Select myweb01-key.pem from Downloads folder",
+        "Double click on private key",
+        "Click OK",
+        "Verify successful login"
+      ]
+    },
+
+    {
+      "task_number": 15,
+      "title": "Test SSH Access From Command Line",
+
+      "command": "ssh -i \"C:\\<path>\\myweb01-key.pem\" ec2-user@<Public-IP>"
+    },
+
+    {
+      "task_number": 16,
+      "title": "Verify myweb01 Web Server",
+
+      "steps": [
+        "Open browser",
+        "Enter http://<Public-IP-of-myweb01>"
+      ],
+
+      "expected_result": "Welcome to my AWS Web Server"
+    },
+
+    {
+      "task_number": 17,
+      "title": "Verify myweb02 Web Server",
+
+      "steps": [
+        "Open browser",
+        "Enter http://<Public-IP-of-myweb02>"
+      ],
+
+      "expected_result": "Welcome to my AWS Web Server"
+    },
+
+    {
+      "task_number": 18,
+      "title": "Disconnect From EC2 Instances",
+
+      "steps": [
+        "Disconnect from EC2 instances using Mobaxterm, CLI, or Terminal"
+      ]
+    },
+
+    {
+      "task_number": 19,
+      "title": "Terminate EC2 Instances",
+
+      "steps": [
+        "Return to EC2 Console",
+        "Select instances myweb01 and myweb02",
+        "Click Instance State",
+        "Choose Terminate Instance"
+      ]
+    },
+
+    {
+      "task_number": 20,
+      "title": "Delete Security Group",
+
+      "steps": [
+        "Navigate to EC2 Console",
+        "Open Security Groups",
+        "Select myweb-sg1",
+        "Delete Security Group"
+      ],
+
+      "condition": "After instances are terminated"
+    },
+
+    {
+      "task_number": 21,
+      "title": "Delete Key Pair",
+
+      "steps": [
+        "Navigate to EC2 Console",
+        "Open Key Pairs",
+        "Select myweb01-key",
+        "Delete Key Pair"
+      ]
+    }
+  ],
+
+  "completion_message": "Cool!!!! Great job."
+}
