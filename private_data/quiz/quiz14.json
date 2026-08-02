@@ -1,0 +1,205 @@
+{
+  "title": "QUIZ 14 - Linux Filesystem",
+  "questions": [
+    {
+      "question": "What is the purpose of the root (/) directory in Linux?",
+      "options": [
+        "Stores user temporary files",
+        "Starting point of the entire Linux filesystem hierarchy",
+        "Stores only kernel modules",
+        "Stores application logs"
+      ],
+      "answer": "Starting point of the entire Linux filesystem hierarchy"
+    },
+    {
+      "question": "Which directory contains system-wide configuration files in Linux?",
+      "options": [
+        "/var",
+        "/etc",
+        "/usr",
+        "/home"
+      ],
+      "answer": "/etc"
+    },
+    {
+      "question": "What is the primary purpose of the /bin directory?",
+      "options": [
+        "Store user documents",
+        "Store hardware devices",
+        "Store essential user commands",
+        "Store system logs"
+      ],
+      "answer": "Store essential user commands"
+    },
+    {
+      "question": "What is the purpose of the /sbin directory?",
+      "options": [
+        "Contains application source code",
+        "Contains user home directories",
+        "Contains temporary files",
+        "Contains system administration commands"
+      ],
+      "answer": "Contains system administration commands"
+    },
+    {
+      "question": "Which directory contains files required for the Linux boot process?",
+      "options": [
+        "/run",
+        "/boot",
+        "/proc",
+        "/tmp"
+      ],
+      "answer": "/boot"
+    },
+    {
+      "question": "What is stored inside the /dev directory?",
+      "options": [
+        "Configuration files",
+        "Device files representing hardware",
+        "User applications",
+        "System logs"
+      ],
+      "answer": "Device files representing hardware"
+    },
+    {
+      "question": "Which of the following represents a storage device in Linux?",
+      "options": [
+        "/etc/sda",
+        "/dev/sda",
+        "/boot/sda",
+        "/var/sda"
+      ],
+      "answer": "/dev/sda"
+    },
+    {
+      "question": "What is the purpose of the /home directory?",
+      "options": [
+        "Stores root's home directory",
+        "Stores kernel files",
+        "Stores users home directory",
+        "Stores device drivers"
+      ],
+      "answer": "Stores users home directory"
+    },
+    {
+      "question": "Where is the home directory of the root user located?",
+      "options": [
+        "/home/root",
+        "/root",
+        "/usr/root",
+        "/etc/root"
+      ],
+      "answer": "/root"
+    },
+    {
+      "question": "Which directory contains installed applications, programs, and libraries?",
+      "options": [
+        "/usr",
+        "/tmp",
+        "/dev",
+        "/proc"
+      ],
+      "answer": "/usr"
+    },
+    {
+      "question": "Which directory usually contains system logs?",
+      "options": [
+        "/proc/log",
+        "/etc/log",
+        "/usr/log",
+        "/var/log"
+      ],
+      "answer": "/var/log"
+    },
+    {
+      "question": "What is the purpose of the /tmp directory?",
+      "options": [
+        "Store temporary files created by applications",
+        "Store permanent user data",
+        "Store kernel source code",
+        "Store boot files"
+      ],
+      "answer": "Store temporary files created by applications"
+    },
+    {
+      "question": "What type of filesystem is /proc?",
+      "options": [
+        "Physical filesystem on hard disk",
+        "Virtual filesystem created by the kernel",
+        "Network filesystem",
+        "Encrypted filesystem"
+      ],
+      "answer": "Virtual filesystem created by the kernel"
+    },
+    {
+      "question": "Which information can be found under /proc?",
+      "options": [
+        "CPU and memory information",
+        "User documents",
+        "Application installers",
+        "Backup files"
+      ],
+      "answer": "CPU and memory information"
+    },
+    {
+      "question": "What is the purpose of the /mnt directory?",
+      "options": [
+        "Stores system logs",
+        "Stores user passwords",
+        "Temporary mount point for filesystems",
+        "Stores executable programs"
+      ],
+      "answer": "Temporary mount point for filesystems"
+    },
+    {
+      "question": "What is the purpose of the /opt directory?",
+      "options": [
+        "Stores kernel modules",
+        "Stores optional third-party software packages",
+        "Stores user home directories",
+        "Stores device files"
+      ],
+      "answer": "Stores optional third-party software packages"
+    },
+    {
+      "question": "What is stored in the /lib directory?",
+      "options": [
+        "Essential shared libraries and kernel modules",
+        "User documents",
+        "Temporary files",
+        "Bootloader settings"
+      ],
+      "answer": "Essential shared libraries and kernel modules"
+    },
+    {
+      "question": "What is the main difference between /proc and /run?",
+      "options": [
+        "/proc is permanent while /run is permanent",
+        "/proc stores user files while /run stores applications",
+        "/proc contains kernel/process information while /run contains runtime service data",
+        "/proc stores logs while /run stores passwords"
+      ],
+      "answer": "/proc contains kernel/process information while /run contains runtime service data"
+    },
+    {
+      "question": "Are files inside /proc stored permanently on disk?",
+      "options": [
+        "Yes, they are stored in /etc",
+        "No, they are virtual files created by the kernel",
+        "Yes, they are stored in /var",
+        "Yes, they are stored in /boot"
+      ],
+      "answer": "No, they are virtual files created by the kernel"
+    },
+    {
+      "question": "Which directory would you check for SSH server configuration?",
+      "options": [
+        "/usr/ssh",
+        "/var/ssh",
+        "/etc/ssh",
+        "/boot/ssh"
+      ],
+      "answer": "/etc/ssh"
+    }
+  ]
+}
