@@ -1,0 +1,205 @@
+{
+  "title": "QUIZ 15 - Linux Basic Commands",
+  "questions": [
+    {
+      "question": "Which command is used to display the number of CPUs attached to a Linux server?",
+      "options": [
+        "lscpu",
+        "nproc",
+        "cpuinfo",
+        "proc"
+      ],
+      "answer": "nproc"
+    },
+    {
+      "question": "Which command displays memory information in a human-readable format?",
+      "options": [
+        "free -h",
+        "free -m",
+        "mem -h",
+        "memory"
+      ],
+      "answer": "free -h"
+    },
+    {
+      "question": "What does the -m option do with the free command?",
+      "options": [
+        "Displays memory in megabytes",
+        "Displays memory in megabits",
+        "Displays memory modules",
+        "Displays memory usage history"
+      ],
+      "answer": "Displays memory in megabytes"
+    },
+    {
+      "question": "Which command is used to list block devices attached to a Linux server?",
+      "options": [
+        "lsdev",
+        "blklist",
+        "lsblk",
+        "disklist"
+      ],
+      "answer": "lsblk"
+    },
+    {
+      "question": "Which of the following is an example of a block device?",
+      "options": [
+        "/etc/passwd",
+        "/dev/sda",
+        "/var/log/messages",
+        "/proc/cpuinfo"
+      ],
+      "answer": "/dev/sda"
+    },
+    {
+      "question": "Which command displays complete information about the Linux kernel?",
+      "options": [
+        "kernel -a",
+        "uname -a",
+        "linux -a",
+        "systeminfo"
+      ],
+      "answer": "uname -a"
+    },
+    {
+      "question": "Which command displays only the kernel release version?",
+      "options": [
+        "uname -r",
+        "uname -v",
+        "kernel --release",
+        "release"
+      ],
+      "answer": "uname -r"
+    },
+    {
+      "question": "What information does the uptime command provide?",
+      "options": [
+        "Disk usage information",
+        "Server running time and load average",
+        "Kernel modules",
+        "User login history only"
+      ],
+      "answer": "Server running time and load average"
+    },
+    {
+      "question": "The load average shown by uptime represents:",
+      "options": [
+        "Amount of free disk space",
+        "CPU temperature",
+        "System workload over time",
+        "Number of logged-in users only"
+      ],
+      "answer": "System workload over time"
+    },
+    {
+      "question": "Which command is used to check user identity information?",
+      "options": [
+        "whoami",
+        "id",
+        "user",
+        "identity"
+      ],
+      "answer": "id"
+    },
+    {
+      "question": "What information does the id command display?",
+      "options": [
+        "Disk information",
+        "User ID, group ID, and group membership",
+        "Kernel information",
+        "Network information"
+      ],
+      "answer": "User ID, group ID, and group membership"
+    },
+    {
+      "question": "Which command displays the current working directory?",
+      "options": [
+        "where",
+        "pwd",
+        "cwd",
+        "dir"
+      ],
+      "answer": "pwd"
+    },
+    {
+      "question": "Which command lists files and directories in the current directory?",
+      "options": [
+        "list",
+        "dir",
+        "ls",
+        "show"
+      ],
+      "answer": "ls"
+    },
+    {
+      "question": "What does the -a option do with the ls command?",
+      "options": [
+        "Shows only active files",
+        "Shows all files including hidden files",
+        "Shows application files only",
+        "Shows archive files"
+      ],
+      "answer": "Shows all files including hidden files"
+    },
+    {
+      "question": "Which command displays hidden files along with detailed information?",
+      "options": [
+        "ls -h",
+        "ls -a",
+        "ls -al",
+        "ls -d"
+      ],
+      "answer": "ls -al"
+    },
+    {
+      "question": "Which command is used to change directories?",
+      "options": [
+        "cd",
+        "chdir",
+        "changedir",
+        "move"
+      ],
+      "answer": "cd"
+    },
+    {
+      "question": "What happens when you execute the following command: cd / ?",
+      "options": [
+        "Moves to the user home directory",
+        "Moves to the root filesystem directory",
+        "Moves to the previous directory",
+        "Logs out the user"
+      ],
+      "answer": "Moves to the root filesystem directory"
+    },
+    {
+      "question": "What directory does the command cd without any argument take you to?",
+      "options": [
+        "Root directory /",
+        "Previous directory",
+        "User home directory",
+        "/tmp"
+      ],
+      "answer": "User home directory"
+    },
+    {
+      "question": "What does the command cd .. do?",
+      "options": [
+        "Moves one directory level up",
+        "Moves two directory levels up",
+        "Moves to the home directory",
+        "Moves to root only"
+      ],
+      "answer": "Moves one directory level up"
+    },
+    {
+      "question": "Which command provides detailed information about the CPU architecture and processors?",
+      "options": [
+        "nproc",
+        "lscpu",
+        "lsblk",
+        "uname"
+      ],
+      "answer": "lscpu"
+    }
+  ]
+}
