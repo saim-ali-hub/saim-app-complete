@@ -1,102 +1,162 @@
 [
   {
-    "title": "Hardware - 06062026",
-    "url": "https://linoop.zoom.us/rec/share/OA9NWx2g9gGuwuhdXEaiwIjSNQ2dLre4FhXMlGWjEabYcU6HNiHAjk3NB5lOpsJH.MNj1qORmC2yOEKkM"
+    "category": "Hardware & Datacenter",
+    "name": "Hardware - 06062026",
+    "url": "https://linoop.zoom.us/rec/share/Xv1ct5BDebg5gCdtEOLQWAUdWpxUi6ov9TZVgtsVFE2d4pVX4zBGwa6_wP4T8De9._syNxMKr3t41bs4a"
   },
   {
-    "title": "Hardware 2 – 06072026",
-    "url": "https://linoop.zoom.us/rec/share/ZXho-b-dX4lo91mtGRnMlk0w2hMQWcZ3CENB1cZScIAlFnYKlFPy12zOnje7-QTG.QHmvlfzFyYmZZpuR"
+    "category": "Hardware & Datacenter",
+    "name": "Hardware 2 – 06072026",
+    "url": "https://linoop.zoom.us/rec/share/ASomz73N2k02FxOVIWyA1q4aj4qXhcc5MWz6hHYRvJ_vAiYLRe83wpDbwR20SKQi.QMpjfybb6LMXaq4F"
   },
   {
-    "title": "Linux Command Review – 06092026",
-    "url": "https://linoop.zoom.us/rec/share/pG0n4Mcnx5L7yByeIvHWY5JVKD5eVnXwI52l1CLoacq8Bq91ZWsB36ecKfXyozdO.mCjhFQzIK4oLSxzi"
+    "category": "Linux",
+    "name": "Linux Command Review – 06092026",
+    "url": "https://linoop.zoom.us/rec/share/83A_alGwGrkPDHiJf7-SB2TWivXQSE0HzwEeSi4-YpiQU4qasZPessvg6sth0WvF.HMbgetYcMCX4E3sM"
   },
   {
-    "title": "Racking & Stacking and iDRAC Configuration – 06112026",
-    "url": "https://linoop.zoom.us/rec/share/VXY9tLM7S5kF71RGaOJlO8XD7TrlqnAKkB__OJi7ZVXedpm5KT0yAjZydC07Eu8H.0adQ-xn9_-JlTkEh"
+    "category": "Hardware & Datacenter",
+    "name": "Racking & Stacking and iDRAC Configuration – 06112026",
+    "url": "https://linoop.zoom.us/rec/share/M0AIgTOmAQ-h3lFl6BVUFMkLEofsKHsfDZnEczSZFeFPnJT7Icag3n7CSU-0y9s1.sGRAqCRluRAxYUQF"
   },
   {
-    "title": "Networking, BIOS & RAID – 06132026",
-    "url": "https://linoop.zoom.us/rec/share/U_yjejh5T9mQXId0oXNFSh0liL5m_7L_LaYw5MOnnir_19z9W7UY3wOYe1A_3ePZ.mDL2VquNDWESJ15h"
+    "category": "Hardware & Datacenter",
+    "name": "Networking, BIOS & RAID – 06132026",
+    "url": "https://linoop.zoom.us/rec/share/FyOQzSenqFmye-4JHi6OIVIDFF5Ev8Lzn1c8b4OjZPyHsO1j3y85E1VZnkAX8zQM.zBpjMzY8NCnbUkKG"
   },
   {
-    "title": "Set up RAID Level & install OS – 06142026",
-    "url": "https://linoop.zoom.us/rec/share/L2Kj_XefD3KaloLYZZX3ffmqlNIK0WR8nqkyqWy7oF4flxP_X0DD9ao67PM7GUGP.svCClHVJ0u_B6r2o"
+    "category": "Hardware & Datacenter",
+    "name": "Set up RAID Level & install OS – 06142026",
+    "url": "https://linoop.zoom.us/rec/share/jHqN2HKGQruUA_wtotqk_hPL-hOyxjxoLXfLzX5uIzgD7jVaQs_Kbd1Qqq4agWpP.sMGRLIwqhV6cKMyl"
   },
   {
-    "title": "Installing Mobaxterm, SSH & Virtualization– 06162026",
-    "url": "https://linoop.zoom.us/rec/share/LIrVeMBS4O27Ta_JxHWpw53hcpU5hus-EbRgZzt3B_pKgfrsp2-HEpncT2fBNzsC.SuSWgIklnbNMUI0F"
+    "category": "VMware Virtualization",
+    "name": "Installing Mobaxterm, SSH & Virtualization– 06162026",
+    "url": "https://linoop.zoom.us/rec/share/P3f2wrbDHYulnaGoSiawYHvkZW9WtVW4-9QBHUyhtloLgNdoSZd7kMlUspCE1eaC.7XkLdHjGhTGv-HJP"
   },
   {
-    "title": "Virtualization, Type-I & type-II hypervisor – 06182026",
-    "url": "https://linoop.zoom.us/rec/share/tsqcK9Up7_EaH-PgHsL8cHMIwQ8zIylZU0pWf_giH1Gn5uwk8hJGhyxDj2rFwATt.Am6lad5Np-MHCKx7"
+    "category": "VMware Virtualization",
+    "name": "Virtualization, Type-I & type-II hypervisor – 06182026",
+    "url": "https://linoop.zoom.us/rec/share/K42p-gm4uFEuzM4FTrpEgx6__wli2AgBrrsaL2vjQfxKcLRveWpnvEtMCn4iGpc6.JDX1_pJW9EoFPF8F"
   },
   {
-    "title": "Installation of type-II hypervisor – 06202026",
-    "url": "https://linoop.zoom.us/rec/share/2EMp-14tyGxrG_uwiqxUSEDJhjpV7ekiISlSLc18NNd-ie0l5wbi-9W7uTY5Xx8.tTtHAXBbw2ANpXWQ"
+    "category": "VMware Virtualization",
+    "name": "Installation of type-II hypervisor – 06202026",
+    "url": "https://linoop.zoom.us/rec/share/pOl8iEfCMdMRlpMvjfCkz67uAfT8rkTl21zXxLiWo64kVoHjuj7e4IUU9IXYEOY.EIaXGi-LwTFUgKQE"
   },
   {
-    "title": "Burning of USB, Installation of ESXi – 06212026",
-    "url": "https://linoop.zoom.us/rec/share/41RYTFPwf9g4_eHfxHkjwpI5-altclEXq5aZbvniYI27uU0dp2AdsVeXIyK5o-7O.G7Tp8ALwFOnfVwLO"
+    "category": "VMware Virtualization",
+    "name": "Burning of USB, Installation of ESXi – 06212026",
+    "url": "https://linoop.zoom.us/rec/share/zSfs0YX3A8_j-81ZBxqKalcqPcG7NUhB9TrPolQWqqEDGoedZx6-Ob7mUWAyUYLx.CK2bGgflqjb89d0R"
   },
   {
-    "title": "VMware Virtualization, ESXi, Vcenter & Industry Expecatations – 06232026",
-    "url": "https://linoop.zoom.us/rec/share/P6z81kX6fG1xeB1zfg596WPnGmp8qzWhJilXVe6XPhx6J6KkVWlMKMMTzKbHBr55.mFJ6ZTQ7w19immuI"
+    "category": "VMware Virtualization",
+    "name": "Hypervizor & Virtualization – 06232026",
+    "url": "https://linoop.zoom.us/rec/share/xzWRahJrUYCSuTkKwnfcbRLozzlDywFhogGZNt1SNtMWbES4_8o8S4ykRaNjO_5I.JkGnr8wiD8-9pFOi"
   },
   {
-    "title": "Interview prep and Review of OS Installation – 06272026",
-    "url": "https://linoop.zoom.us/rec/share/TcSC6EQEi8nPEFU4aPQZqQm2QDJ25IJ2-wKh-8RJ0H3gCqs4p5kwAo2pWDQN72M.VoCa3oIEmSJ4-CrF"
+    "category": "VMware Virtualization",
+    "name": "Interview prep and Review of OS Installation – 06272026",
+    "url": "https://linoop.zoom.us/rec/share/OljYJTyWLYJNP7XFEHmi6Wst5eDD04BfQKtRpQrZGd8CLBZDapFUqTGZ7ruHgfI.TvSKKmvVc8pfSfYO"
   },
   {
-    "title": "Presentation of Installation of ESXi & OS – 06302026",
-    "url": "https://linoop.zoom.us/rec/share/e3fsEHn51cm04196lAaPS9Pc7NhrQCB22vaTbeKhG6JkK-D9NCHbCVmkl9td2KGf.BVH2l0nIJVlo_rvG"
+    "category": "VMware Virtualization",
+    "name": "OS Installation & Troubleshooting – 06282026",
+    "url": "https://linoop.zoom.us/rec/share/aVY9I2qco6Pp3ZZ57CH_2giKY91uFn_De1EHo7Hkj7durxMjFU1qZussQADY6i-R.VGNsuLOeUys5ygI2"
   },
   {
-    "title": "Vcenter Configuration – 07022026",
-    "url": "https://linoop.zoom.us/rec/share/XSXx0HaiNopxfCYqZMGbuYup2otLYGqWDXUQT4s4VzkaQXw_xTj8wFw8Mog22iM2.yQVlMoCOjo1NE3uh"
+    "category": "VMware Virtualization",
+    "name": "Presentation of Installation of ESXi & OS – 06302026",
+    "url": "https://linoop.zoom.us/rec/share/iJHWfq1-op0Zon4-WT7bZt4OcQFmUfQUk5X3jt7K0bxR80JVe5Vgofuvo8qVF2Y8.BuqdAfuIBz4X95Dt"
   },
   {
-    "title": "Configuring VMware Cluster, DRS, HA, Vmotion – 07052026",
-    "url": "https://linoop.zoom.us/rec/share/M1hHxOm-cr0mCT5N8ek6uRQV38PSaSunMK4zMLK9XaHRbrMq7vi22TyZ3Fu_ya_v.C_d4H_LnX9EU1KRB"
+    "category": "VMware Virtualization",
+    "name": "Vcenter Configuration – 07022026",
+    "url": "https://linoop.zoom.us/rec/share/s_xuw1btFgtaE3tuDxxhiONZGkntdXHtPr81TnBeuKkLpj_lYIi2Sq5EhmV05gue.x0WZVCrlS-DQWp30"
   },
   {
-    "title": "Vcenter Operation & Guideline for Resume Prep – 07072026",
-    "url": "https://linoop.zoom.us/rec/share/x2J2Z1Oj7HX0dJQYbZlUqcIQXVU-FHGvOi6RQOIOVI2KwAVynwBFjSFYQQO-y6Rb.dpGChCyvGB0y2mV2"
+    "category": "VMware Virtualization",
+    "name": "Configuring VMware Cluster, DRS, HA, Vmotion – 07052026",
+    "url": "https://linoop.zoom.us/rec/share/IkELK7b8Yd_IIdw75OrDZk8fTzT_LBRREvRXvme6Sc4wZ_1gBoaBH2GmzwOTR4fT.dTzV1ngy4iQrQKzK"
   },
   {
-    "title": "Review of TSR1 - Part1 – 07092026",
-    "url": "https://linoop.zoom.us/rec/share/ZumHfL4DPjH7afXIxyquEVlhdmTFQYGKvPUmjWk6dPvO20Az00retljo9-4_A0fG.xN9ksyU2pIhEwPUF"
+    "category": "VMware Virtualization",
+    "name": "Vcenter Operation & Guideline for Resume Prep – 07072026",
+    "url": "https://linoop.zoom.us/rec/share/ezxxgXaPvJYyB8aXlXJuXatSMaOlFf1FgQ24bTM8hLO-64hcDPPrri-ZSC99Pz-o.odJO18bQa9oYV_0E"
   },
   {
-    "title": "Review of TSR1 - Part2 – 07112026",
-    "url": "https://linoop.zoom.us/rec/share/C6hgOnQQxon6SdR0YgUlN7KGxxG1762x8ae680A73jeydQxnJKBWx_eB8D7RG7z0.X1g2xL4X-k1tpL-M"
+    "category": "TSR1",
+    "name": "Review of TSR1 - Part1 – 07092026",
+    "url": "https://linoop.zoom.us/rec/share/k0pjwDxDe9w-B0T42OhzF7wS-WEa1oVJ73gLJG3HE3_iw0r9kca4jGxD4TSpqeQj.Yrsdl1TxovKR6ypa"
   },
   {
-    "title": "Review of TSR1 - Part3 – 07122026",
-    "url": "https://linoop.zoom.us/rec/share/1Dt2B8WEpb_fDegqzSD7-epA_kv5O9coMRdot9M_wLb0eSAI2pnWcAlruQKJN6Su.ss8RaVJwXYNPFqk-"
+    "category": "TSR1",
+    "name": "Review of TSR1 - Part2 – 07112026",
+    "url": "https://linoop.zoom.us/rec/share/LV_jw0JarKMA40u08qX8aOGmnTKIs6ydQhE-XK_OcozTLuuZjM4YOFo04fTFO8oa.Dr1VfoIOGH6crZrI"
   },
   {
-    "title": "Introduction to Cloud (AWS) – 07162026",
-    "url": "https://linoop.zoom.us/rec/share/RmbBiHNDEUvzmh-lfNYpkJhRto15lsZT42kZZETL5emzuCU7CT-U8S7TEr_sskka.ynQf0z2wYsQT4K2U"
+    "category": "TSR1",
+    "name": "Review of TSR1 - Part3 – 07122026",
+    "url": "https://linoop.zoom.us/rec/share/5_RrqzrPqMA3T8t2UnnYIATsSCNmx2-ayDiq27WAq1Fzt6zYXXK_xZg5wLQAvoOM.fYx6nCDVUy2-ZPhv"
   },
   {
-    "title": "AWS & Cloud Computing – 07182026",
-    "url": "https://linoop.zoom.us/rec/share/JGvoauEYEVxSil5wDpObGMgllYULE-l_ny_pr9kUbMdJuH2g6USeg4c9NtAfpEoM.la3IENcX5b8TdKGY"
+    "category": "AWS",
+    "name": "Introduction to Cloud (AWS) – 07162026",
+    "url": "https://linoop.zoom.us/rec/share/SOQ7_4erfjVlTlhQGw6HUrgby6YszlSDPZ2h_-jlxvDHHZ20Jeoi-wJAU0PNru5y.LAOTb3hMW_BdGDua"
   },
   {
-    "title": "Hierarchy of AWS's Global Infrastructure – 07192026",
-    "url": "https://linoop.zoom.us/rec/share/VskI7x6uDZPXKyCZr8hPj3wznAtClY4BPtb3lkTG7HWqoozQqNtEgRcE6PZGQgdU.bOCpjgkIB3b8iPCF"
+    "category": "AWS",
+    "name": "AWS & Cloud Computing – 07182026",
+    "url": "https://linoop.zoom.us/rec/share/Os6frKXeoBCezxQchHn4eSw5HzAF3GTgLu6KpBuVnTnwFH51xIExX3aYCgwGzyEC.Laluxdi6N-LGZsRk"
   },
   {
-    "title": "Launching EC2 instance in AWS – 07212026",
-    "url": "https://linoop.zoom.us/rec/share/eXZPyqyyWFayS0pya7j-umN3M_aM4iGwl9Q_xxGUxURLdmWCc-kRq0c5nISLxaUX.8t_6d8qWlukekV0C"
+    "category": "AWS",
+    "name": "Hierarchy of AWS's Global Infrastructure – 07192026",
+    "url": "https://linoop.zoom.us/rec/share/6rzpUZ7t9Qm5tkbMQxSwpc19K_pnpqjjYAJ799l17hnSWMd_45WBB6OmhsIucCSx.0TadRhDvm12Kw_jD"
   },
   {
-    "title": "Review of Cloud Fundamentals & Launching EC2 instance in AWS – 07232026",
-    "url": "https://linoop.zoom.us/rec/share/IPBUb9mfxjTGepIaYAq1xdZQSzH0_1aGKcBHoA6PziY4E9iNS779xgKOTKfvvAR4.33wgZuWuuxrbcFdK"
+    "category": "AWS",
+    "name": "Launching EC2 instance in AWS – 07212026",
+    "url": "https://linoop.zoom.us/rec/share/8fSxGvMrYQ5on4c1ObLOJ9L4pSmf8cQJ7VN9t94mucx9IfmKQZwWHS3pEmQWwnk3.5wv9o2_uqSSfEFR6"
   },
   {
-    "title": "AWS IAM & MFA – 07252026",
-    "url": "https://linoop.zoom.us/rec/share/_V_Cn4E00mH4zJ6x_TSHYYrblOdikqQ8aSMFP826RwD4zlduCdEyXL9N1hY72nN6.D0uUgc3J1UBgTiep"
+    "category": "AWS",
+    "name": "Review of Cloud Fundamentals & Launching EC2 instance in AWS – 07232026",
+    "url": "https://linoop.zoom.us/rec/share/Z4-ZYQo40BVD24djIntSrbfeKvPMS5uJx4WAK99_SpAY6JUw4y1pfzNH0XOLTSbO.CWNqsXvvcAmjcbXA"
+  },
+  {
+    "category": "AWS",
+    "name": "AWS IAM & MFA – 07252026",
+    "url": "https://linoop.zoom.us/rec/share/r8JYiLtSAUWQ2tjHuex_QGVGkwwbLmdy2Nxv8yYH6cphM8ee1fG-6dsTKS4Izsu6.ZlApWLBaUjNw0mAn"
+  },
+  {
+    "category": "AWS",
+    "name": "AWS S3 Storage Management – 07262026",
+    "url": "https://linoop.zoom.us/rec/share/6TY85v44rEHIM0Ro57aFd40yWWjJ9y25fhPTKsCbrbmvBZzWgar3PJerF9ov3hj9.Cr8l2qaPXOW0dToG"
+  },
+  {
+    "category": "AWS",
+    "name": "Review - Launching EC2 instances – 07282026",
+    "url": "https://linoop.zoom.us/rec/share/9iIOcgkmTuDhwCd3K2laj5jMpL6YWwAjbRazNuztO_96RCfnD6UwHBTz3yEqSHl0.-ZphPYKhwxkO-RCI"
+  },
+  {
+    "category": "AWS",
+    "name": "EC2 instance options, Concept of Security Group – 07302026",
+    "url": "https://linoop.zoom.us/rec/share/722AaE7dCgNnMt4eBi3qg-wH007pRj4mdUhvwcrOlKuDyIjY673mc9uJ6IM4q7Oz.xB5mmByRBh5SOxDV"
+  },
+  {
+    "category": "Linux",
+    "name": "Introduction to Linux Operating System – 08012026",
+    "url": "https://linoop.zoom.us/rec/share/P33bDQparwnrAZXmr0bEs2QnnnzphQCQ9bH_6s5CWF0a6OmsGtwwzH4qOz_sJcBO.R-XHCrDhacbGQ-sP"
+  },
+  {
+    "category": "Linux",
+    "name": "Linux File system and Basic Commands Part I – 08022026",
+    "url": "https://linoop.zoom.us/rec/share/FuP7jdgLn7zLWGEh6q_GEYg67ch7UQ7vWPQqBG-UYGeYy5bPLebb08nduLqlDIIj.6zzTNL-rcFOjAJGd"
+  },
+  {
+    "category": "Linux",
+    "name": "Linux File system and Basic Commands Part II – 08022026",
+    "url": "https://linoop.zoom.us/rec/share/COyQB4HavWAZz6lc-jJt2Hx6t6v3T8BHDKwN2VYRQFUSSPUAot8un3vUVdjsqHhi.7gbJ3YrvLBKqfaM6"
   }
 ]
