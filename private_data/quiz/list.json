@@ -51,4 +51,12 @@
         "name": "Quiz 13 - AWS S3 Storage",
         "file": "quiz13.json"
     },
+    {
+        "name": "Quiz 14 - Linux Filesystem",
+        "file": "quiz14.json"
+    },
+    {
+        "name": "Quiz 15 - Linux Basic Commands",
+        "file": "quiz15.json"
+    }
 ]
